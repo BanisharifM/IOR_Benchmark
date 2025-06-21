@@ -62,10 +62,21 @@ fi
 echo "Test 4: Checking IOR installation..."
 if [ -f "$CONDA_PREFIX/bin/ior" ]; then
     echo "✓ IOR found at $CONDA_PREFIX/bin/ior"
-    if "$CONDA_PREFIX/bin/ior" --help >/dev/null 2>&1; then
-        echo "✓ IOR runs successfully"
+    STDCPP_PATH=$(find "$CONDA_PREFIX" -name "libstdc++.so.6" | head -n1)
+    export STDCPP_PATH
+
+    # Try direct execution
+    if LD_PRELOAD="$STDCPP_PATH" "$CONDA_PREFIX/bin/ior" --help 2>&1 | grep -q "Synopsis"; then
+        echo "✓ IOR runs successfully (direct)"
+    
+    # Try with mpirun
+    elif LD_PRELOAD="$STDCPP_PATH" mpirun -np 1 "$CONDA_PREFIX/bin/ior" --help 2>&1 | grep -q "Synopsis"; then
+        echo "✓ IOR runs successfully (with mpirun)"
+    
     else
-        echo "✗ IOR execution failed"
+        echo "✗ IOR execution failed (both direct and mpirun)"
+        echo "Output from direct attempt:"
+        LD_PRELOAD="$STDCPP_PATH" "$CONDA_PREFIX/bin/ior" --help || true
         exit 1
     fi
 else
@@ -73,7 +84,8 @@ else
     exit 1
 fi
 
-# Test 5: Check Darshan installation
+
+# Test 5: Check Darshan installation...
 echo "Test 5: Checking Darshan installation..."
 if [ -f "$CONDA_PREFIX/lib/libdarshan.so" ]; then
     echo "✓ Darshan runtime library found"
@@ -82,9 +94,12 @@ else
     exit 1
 fi
 
-if [ -f "$CONDA_PREFIX/bin/darshan-parser" ]; then
-    echo "✓ Darshan utilities found"
-    if "$CONDA_PREFIX/bin/darshan-parser" --help >/dev/null 2>&1; then
+# Search for darshan-parser in PATH or known install location
+DARSHAN_PARSER=$(which darshan-parser)
+
+if [ -x "$DARSHAN_PARSER" ]; then
+    echo "✓ Darshan utilities found at $DARSHAN_PARSER"
+    if "$DARSHAN_PARSER" --help 2>&1 | grep -q "Usage:"; then
         echo "✓ Darshan parser runs successfully"
     else
         echo "✗ Darshan parser execution failed"
@@ -95,24 +110,20 @@ else
     exit 1
 fi
 
-# Test 6: Run a small POSIX benchmark
+# Ensure Conda libs are first
+export LD_LIBRARY_PATH="$CONDA_PREFIX/lib:$LD_LIBRARY_PATH"
+export STDCPP_PATH=$(find "$CONDA_PREFIX/lib" -name "libstdc++.so.6" | head -n1)
+
+# Test 6: Run POSIX benchmark
 echo "Test 6: Running small POSIX benchmark test..."
 export BLOCK_SIZE="1m"
 export TRANSFER_SIZE="64k"
-export NUM_TASKS="2"
 export ITERATIONS="1"
-export TEST_FILE="$LOG_DIR/tests/test_posix_file"
+export TEST_FILE="./test_posix_file"
 
-# Temporarily disable Darshan for this test to avoid issues
-unset LD_PRELOAD
-
-if timeout 60 mpirun -np 2 "$CONDA_PREFIX/bin/ior" \
-    -a POSIX \
-    -b "$BLOCK_SIZE" \
-    -t "$TRANSFER_SIZE" \
-    -i "$ITERATIONS" \
-    -o "$TEST_FILE" \
-    -w -r >/dev/null 2>&1; then
+if timeout 60 env LD_PRELOAD="$STDCPP_PATH" mpirun -np 2 "$CONDA_PREFIX/bin/ior" \
+  -a POSIX -b "$BLOCK_SIZE" -t "$TRANSFER_SIZE" -i "$ITERATIONS" \
+  -o "$TEST_FILE" -w -r -v; then
     echo "✓ POSIX benchmark test completed successfully"
     rm -f "$TEST_FILE"*
 else
@@ -123,48 +134,65 @@ fi
 # Test 7: Run a small HDF5 benchmark
 echo "Test 7: Running small HDF5 benchmark test..."
 export TEST_FILE="$LOG_DIR/tests/test_hdf5_file.h5"
+export HDF5_LOG="$LOG_DIR/tests/hdf5_benchmark.log"
 
-if timeout 60 mpirun -np 2 "$CONDA_PREFIX/bin/ior" \
+if [ ! -f "$STDCPP_PATH" ]; then
+    echo "✗ libstdc++.so.6 not found at $STDCPP_PATH"
+    exit 1
+fi
+
+if timeout 60 LD_PRELOAD="$STDCPP_PATH" mpirun -np 2 "$CONDA_PREFIX/bin/ior" \
     -a HDF5 \
     -b "$BLOCK_SIZE" \
     -t "$TRANSFER_SIZE" \
     -i "$ITERATIONS" \
     -o "$TEST_FILE" \
-    -w -r >/dev/null 2>&1; then
+    -w -r -v -c --hdf5.collectiveMetadata 2>&1 | tee "$HDF5_LOG"; then
     echo "✓ HDF5 benchmark test completed successfully"
     rm -f "$TEST_FILE"*
 else
-    echo "✗ HDF5 benchmark test failed"
+    echo "✗ HDF5 benchmark test failed (see $HDF5_LOG for details)"
     exit 1
 fi
 
+# Ensure we're using the correct MPI environment
+export MPIRUN_PATH="$CONDA_PREFIX/bin/mpirun"
+export LD_LIBRARY_PATH="$CONDA_PREFIX/lib:$LD_LIBRARY_PATH"
+export LD_PRELOAD="$STDCPP_PATH:$CONDA_PREFIX/lib/libdarshan.so"
+
 # Test 8: Test Darshan profiling
 echo "Test 8: Testing Darshan profiling..."
-export LD_PRELOAD="$CONDA_PREFIX/lib/libdarshan.so"
+export LD_PRELOAD="$STDCPP_PATH:$CONDA_PREFIX/lib/libdarshan.so"
 export DARSHAN_LOG_PATH="$LOG_DIR/tests"
 
-if timeout 30 mpirun -np 1 "$CONDA_PREFIX/bin/ior" \
+if timeout 30 "$MPIRUN_PATH" -np 2 "$CONDA_PREFIX/bin/ior" \
     -a POSIX \
     -b "1m" \
     -t "64k" \
     -i 1 \
-    -o "$LOG_DIR/tests/darshan_test_file" \
+    -o "$DARSHAN_LOG_PATH/darshan_test_file" \
     -w >/dev/null 2>&1; then
     
-    # Check if Darshan log was created
     sleep 2
-    DARSHAN_LOGS=$(find "$LOG_DIR/tests" -name "*.darshan" -mmin -2 | wc -l)
+    DARSHAN_LOGS=$(find "$DARSHAN_LOG_PATH" -name "*.darshan" -mmin -2 2>/dev/null | wc -l)
     if [ "$DARSHAN_LOGS" -gt 0 ]; then
         echo "✓ Darshan profiling test completed successfully"
-        rm -f "$LOG_DIR/tests/darshan_test_file"*
+        rm -f "$DARSHAN_LOG_PATH/darshan_test_file"*
     else
         echo "✗ Darshan log not generated"
+        ls -l "$DARSHAN_LOG_PATH"
         exit 1
     fi
 else
     echo "✗ Darshan profiling test failed"
+    echo "DEBUG: LD_PRELOAD=$LD_PRELOAD"
+    echo "DEBUG: IOR path: $CONDA_PREFIX/bin/ior"
+    echo "DEBUG: mpirun: $MPIRUN_PATH"
+    echo "DEBUG: Darshan log path: $DARSHAN_LOG_PATH"
+    ls -l "$DARSHAN_LOG_PATH"
     exit 1
 fi
+
 
 echo "=== All tests passed successfully! ==="
 echo "The simple IOR-Darshan setup is working correctly."

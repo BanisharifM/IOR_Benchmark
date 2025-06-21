@@ -8,7 +8,7 @@ set -e
 echo "=== Installing Darshan I/O Profiling Tool (Simple Version) ==="
 
 # Check if conda environment is activated
-if [[ "$CONDA_DEFAULT_ENV" != "ior_env" ]]; then
+if [[ "$CONDA_DEFAULT_ENV" != "ior_openmpi" ]]; then
     echo "Error: Please activate the ior_env conda environment first:"
     echo "  conda activate ior_env"
     echo "  # or"

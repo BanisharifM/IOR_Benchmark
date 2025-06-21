@@ -9,7 +9,7 @@ echo "=== Conda-based Installation for IOR-Darshan Repository ==="
 echo "This script will create a conda environment with all required dependencies"
 
 # Configuration
-ENV_NAME="ior-darshan"
+ENV_NAME="ior_env2"
 CONDA_FORGE_CHANNEL="conda-forge"
 
 # Check if conda is available
@@ -74,7 +74,7 @@ conda install -c $CONDA_FORGE_CHANNEL -y \
 
 # Install additional Python packages via pip
 echo "Installing additional Python packages..."
-pip install pydarshan
+# pip install pydarshan
 
 # Install development libraries
 echo "Installing development libraries..."
