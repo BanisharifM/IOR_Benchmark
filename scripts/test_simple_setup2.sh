@@ -101,6 +101,15 @@ fi
 
 export LD_LIBRARY_PATH="$CONDA_PREFIX/lib:$LD_LIBRARY_PATH"
 
+# Shared Darshan settings
+mkdir -p "$REPO_DIR/logs/$(date +%Y/%-m/%-d)"  # ensures Darshan's date-based path exists
+
+DARSHAN_LOG_PATH="$LOG_DIR/tests"
+DARSHAN_LOGDIR="$DARSHAN_LOG_PATH"
+DARSHAN_JOBID=$RANDOM
+export DARSHAN_LOGDIR DARSHAN_ENABLE_NONMPI=1 DARSHAN_JOBID
+export LD_PRELOAD="$STDCPP_PATH:$DARSHAN_LIB"
+
 # Test 6: POSIX benchmark
 echo "Test 6: Running small POSIX benchmark test..."
 BLOCK_SIZE="1m"
@@ -108,7 +117,7 @@ TRANSFER_SIZE="64k"
 ITERATIONS="1"
 TEST_FILE="./test_posix_file"
 
-if timeout 60 env LD_PRELOAD="$STDCPP_PATH" mpirun -np 2 "$IOR_BIN" \
+if timeout 60 env LD_PRELOAD="$LD_PRELOAD" mpirun -np 2 "$IOR_BIN" \
   -a POSIX -b "$BLOCK_SIZE" -t "$TRANSFER_SIZE" -i "$ITERATIONS" \
   -o "$TEST_FILE" -w -r -v; then
     echo "✓ POSIX benchmark test completed successfully"
@@ -128,9 +137,9 @@ if [ ! -f "$STDCPP_PATH" ]; then
     exit 1
 fi
 
-if timeout 60 bash -c "LD_PRELOAD=$STDCPP_PATH mpirun -np 2 $IOR_BIN \
+if timeout 60 bash -c "LD_PRELOAD=$LD_PRELOAD mpirun -np 2 $IOR_BIN \
     -a HDF5 -b $BLOCK_SIZE -t $TRANSFER_SIZE -i $ITERATIONS -o $TEST_FILE \
-    -w -r -v -c --hdf5.collectiveMetadata" 2>&1 | tee "$HDF5_LOG"; then
+    -w -r -v -c" 2>&1 | tee "$HDF5_LOG"; then
     echo "✓ HDF5 benchmark test completed successfully"
     rm -f "$TEST_FILE"*
 else
@@ -140,6 +149,7 @@ fi
 
 # Test 8: Darshan profiling (FIXED)
 echo "Test 8: Testing Darshan profiling..."
+mkdir -p "$REPO_DIR/logs/$(date +%Y/%-m/%-d)"
 DARSHAN_LOG_PATH="$LOG_DIR/tests"
 DARSHAN_LOGDIR="$DARSHAN_LOG_PATH"
 DARSHAN_JOBID=$RANDOM

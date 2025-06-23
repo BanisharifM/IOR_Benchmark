@@ -1,0 +1,30 @@
+/var/spool/slurmd/job10746775/slurm_script: line 15: /u/mbanisharifdehkordi/miniconda3/etc/profile.d/conda.sh: No such file or directory
+usage: conda [-h] [-v] [--no-plugins] [-V] COMMAND ...
+conda: error: argument COMMAND: invalid choice: 'activate' (choose from 'clean', 'compare', 'config', 'create', 'info', 'init', 'install', 'list', 'notices', 'package', 'remove', 'uninstall', 'rename', 'run', 'search', 'update', 'upgrade', 'build', 'content-trust', 'convert', 'debug', 'develop', 'doctor', 'index', 'inspect', 'metapackage', 'render', 'repoquery', 'skeleton', 'token', 'server', 'verify', 'repo', 'env')
+[gpua045.delta.ncsa.illinois.edu:1201936] mca: base: components_register: registering framework ras components
+[gpua045.delta.ncsa.illinois.edu:1201936] mca: base: components_register: found loaded component gridengine
+[gpua045.delta.ncsa.illinois.edu:1201936] mca: base: components_register: component gridengine register function successful
+[gpua045.delta.ncsa.illinois.edu:1201936] mca: base: components_register: found loaded component simulator
+[gpua045.delta.ncsa.illinois.edu:1201936] mca: base: components_register: component simulator register function successful
+[gpua045.delta.ncsa.illinois.edu:1201936] mca: base: components_register: found loaded component slurm
+[gpua045.delta.ncsa.illinois.edu:1201936] mca: base: components_register: component slurm register function successful
+[gpua045.delta.ncsa.illinois.edu:1201936] mca: base: components_open: opening ras components
+[gpua045.delta.ncsa.illinois.edu:1201936] mca: base: components_open: found loaded component gridengine
+[gpua045.delta.ncsa.illinois.edu:1201936] mca: base: components_open: component gridengine open function successful
+[gpua045.delta.ncsa.illinois.edu:1201936] mca: base: components_open: found loaded component simulator
+[gpua045.delta.ncsa.illinois.edu:1201936] mca: base: components_open: found loaded component slurm
+[gpua045.delta.ncsa.illinois.edu:1201936] mca: base: components_open: component slurm open function successful
+[gpua045.delta.ncsa.illinois.edu:1201936] mca:base:select: Auto-selecting ras components
+[gpua045.delta.ncsa.illinois.edu:1201936] mca:base:select:(  ras) Querying component [gridengine]
+[gpua045.delta.ncsa.illinois.edu:1201936] mca:base:select:(  ras) Querying component [simulator]
+[gpua045.delta.ncsa.illinois.edu:1201936] mca:base:select:(  ras) Querying component [slurm]
+[gpua045.delta.ncsa.illinois.edu:1201936] mca:base:select:(  ras) Query of component [slurm] set priority to 50
+[gpua045.delta.ncsa.illinois.edu:1201936] mca:base:select:(  ras) Selected component [slurm]
+[gpua045.delta.ncsa.illinois.edu:1201936] mca: base: close: component gridengine closed
+[gpua045.delta.ncsa.illinois.edu:1201936] mca: base: close: unloading component gridengine
+[gpua045.delta.ncsa.illinois.edu:1201936] mca: base: close: unloading component simulator
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/ior-darshan-repo/logs/2025/6/20/mbanisha_ior_id1201940-1201940_6-20-70395-2203629566863796917.darshan_partial.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/ior-darshan-repo/logs/2025/6/20/mbanisha_ior_id1201941-1201941_6-20-70395-16377106341044070141.darshan_partial.
+[gpua045.delta.ncsa.illinois.edu:1201936] mca: base: close: component slurm closed
+[gpua045.delta.ncsa.illinois.edu:1201936] mca: base: close: unloading component slurm
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/ior-darshan-repo/logs/2025/6/20/mbanisha_mpirun_id1201936-1201936_6-20-70394-12501308513153415753.darshan_partial.

@@ -1,0 +1,56 @@
+usage: conda [-h] [-v] [--no-plugins] [-V] COMMAND ...
+conda: error: argument COMMAND: invalid choice: 'activate' (choose from 'clean', 'compare', 'config', 'create', 'info', 'init', 'install', 'list', 'notices', 'package', 'remove', 'uninstall', 'rename', 'run', 'search', 'update', 'upgrade', 'build', 'content-trust', 'convert', 'debug', 'develop', 'doctor', 'index', 'inspect', 'metapackage', 'render', 'repoquery', 'skeleton', 'env', 'verify', 'repo', 'token', 'server')
+[gpua045.delta.ncsa.illinois.edu:1196253] mca: base: components_register: registering framework ras components
+[gpua045.delta.ncsa.illinois.edu:1196253] mca: base: components_register: found loaded component gridengine
+[gpua045.delta.ncsa.illinois.edu:1196253] mca: base: components_register: component gridengine register function successful
+[gpua045.delta.ncsa.illinois.edu:1196253] mca: base: components_register: found loaded component simulator
+[gpua045.delta.ncsa.illinois.edu:1196253] mca: base: components_register: component simulator register function successful
+[gpua045.delta.ncsa.illinois.edu:1196253] mca: base: components_register: found loaded component slurm
+[gpua045.delta.ncsa.illinois.edu:1196253] mca: base: components_register: component slurm register function successful
+[gpua045.delta.ncsa.illinois.edu:1196253] mca: base: components_open: opening ras components
+[gpua045.delta.ncsa.illinois.edu:1196253] mca: base: components_open: found loaded component gridengine
+[gpua045.delta.ncsa.illinois.edu:1196253] mca: base: components_open: component gridengine open function successful
+[gpua045.delta.ncsa.illinois.edu:1196253] mca: base: components_open: found loaded component simulator
+[gpua045.delta.ncsa.illinois.edu:1196253] mca: base: components_open: found loaded component slurm
+[gpua045.delta.ncsa.illinois.edu:1196253] mca: base: components_open: component slurm open function successful
+[gpua045.delta.ncsa.illinois.edu:1196253] mca:base:select: Auto-selecting ras components
+[gpua045.delta.ncsa.illinois.edu:1196253] mca:base:select:(  ras) Querying component [gridengine]
+[gpua045.delta.ncsa.illinois.edu:1196253] mca:base:select:(  ras) Querying component [simulator]
+[gpua045.delta.ncsa.illinois.edu:1196253] mca:base:select:(  ras) Querying component [slurm]
+[gpua045.delta.ncsa.illinois.edu:1196253] mca:base:select:(  ras) Query of component [slurm] set priority to 50
+[gpua045.delta.ncsa.illinois.edu:1196253] mca:base:select:(  ras) Selected component [slurm]
+[gpua045.delta.ncsa.illinois.edu:1196253] mca: base: close: component gridengine closed
+[gpua045.delta.ncsa.illinois.edu:1196253] mca: base: close: unloading component gridengine
+[gpua045.delta.ncsa.illinois.edu:1196253] mca: base: close: unloading component simulator
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 2
+slots that were requested by the application:
+
+  /u/mbanisharifdehkordi/.conda/envs/ior_env/bin/ior
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------
+[gpua045.delta.ncsa.illinois.edu:1196253] mca: base: close: component slurm closed
+[gpua045.delta.ncsa.illinois.edu:1196253] mca: base: close: unloading component slurm
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/ior-darshan-repo/logs/2025/6/20/mbanisha_mpirun_id1196253-1196253_6-20-70274-6465570033181118588.darshan_partial.
