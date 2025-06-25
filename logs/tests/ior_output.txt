@@ -1,0 +1,68 @@
+[gpua051.delta.ncsa.illinois.edu:3117153] mca: base: components_register: registering framework ras components
+[gpua051.delta.ncsa.illinois.edu:3117153] mca: base: components_register: found loaded component gridengine
+[gpua051.delta.ncsa.illinois.edu:3117153] mca: base: components_register: component gridengine register function successful
+[gpua051.delta.ncsa.illinois.edu:3117153] mca: base: components_register: found loaded component simulator
+[gpua051.delta.ncsa.illinois.edu:3117153] mca: base: components_register: component simulator register function successful
+[gpua051.delta.ncsa.illinois.edu:3117153] mca: base: components_register: found loaded component slurm
+[gpua051.delta.ncsa.illinois.edu:3117153] mca: base: components_register: component slurm register function successful
+[gpua051.delta.ncsa.illinois.edu:3117153] mca: base: components_open: opening ras components
+[gpua051.delta.ncsa.illinois.edu:3117153] mca: base: components_open: found loaded component gridengine
+[gpua051.delta.ncsa.illinois.edu:3117153] mca: base: components_open: component gridengine open function successful
+[gpua051.delta.ncsa.illinois.edu:3117153] mca: base: components_open: found loaded component simulator
+[gpua051.delta.ncsa.illinois.edu:3117153] mca: base: components_open: found loaded component slurm
+[gpua051.delta.ncsa.illinois.edu:3117153] mca: base: components_open: component slurm open function successful
+[gpua051.delta.ncsa.illinois.edu:3117153] mca:base:select: Auto-selecting ras components
+[gpua051.delta.ncsa.illinois.edu:3117153] mca:base:select:(  ras) Querying component [gridengine]
+[gpua051.delta.ncsa.illinois.edu:3117153] mca:base:select:(  ras) Querying component [simulator]
+[gpua051.delta.ncsa.illinois.edu:3117153] mca:base:select:(  ras) Querying component [slurm]
+[gpua051.delta.ncsa.illinois.edu:3117153] mca:base:select:(  ras) Query of component [slurm] set priority to 50
+[gpua051.delta.ncsa.illinois.edu:3117153] mca:base:select:(  ras) Selected component [slurm]
+[gpua051.delta.ncsa.illinois.edu:3117153] mca: base: close: component gridengine closed
+[gpua051.delta.ncsa.illinois.edu:3117153] mca: base: close: unloading component gridengine
+[gpua051.delta.ncsa.illinois.edu:3117153] mca: base: close: unloading component simulator
+
+======================   ALLOCATED NODES   ======================
+	gpua051: flags=0x11 slots=8 max_slots=0 slots_inuse=0 state=UP
+=================================================================
+IOR-4.0.0: MPI Coordinated Test of Parallel I/O
+Began               : Mon Jun 23 13:10:41 2025
+Command line        : /u/mbanisharifdehkordi/.conda/envs/ior_env/bin/ior -a POSIX -b 16m -t 1m -i 5 -F -o /u/mbanisharifdehkordi/Github/IOR_Benchmark/logs/tests/darshan_test_file.darshan -w
+Machine             : Linux gpua051.delta.ncsa.illinois.edu
+TestID              : 0
+StartTime           : Mon Jun 23 13:10:43 2025
+Path                : /u/mbanisharifdehkordi/Github/IOR_Benchmark/logs/tests/darshan_test_file.darshan.00000000
+FS                  : 1912.6 TiB   Used FS: 4.2%   Inodes: 7107.2 Mi   Used Inodes: 6.1%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /u/mbanisharifdehkordi/Github/IOR_Benchmark/logs/tests/darshan_test_file.darshan
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : no tasks offsets
+nodes               : 1
+tasks               : 8
+clients per node    : 8
+repetitions         : 5
+xfersize            : 1 MiB
+blocksize           : 16 MiB
+aggregate filesize  : 128 MiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+write     2401.41    6391       0.000669    16384      1024.00    0.010836   0.020028   0.042566   0.053302   0   
+write     2502.24    5894       0.000671    16384      1024.00    0.012588   0.021716   0.040455   0.051154   1   
+write     2240.19    4513       0.000728    16384      1024.00    0.019461   0.028360   0.045296   0.057138   2   
+write     2747.13    4977       0.000739    16384      1024.00    0.015702   0.025720   0.035442   0.046594   3   
+write     1832.62    4710       0.000630    16384      1024.00    0.019512   0.027177   0.058625   0.069845   4   
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write        2747.13    1832.62    2344.72     304.34    2747.13    1832.62    2344.72     304.34    0.05561         NA            NA     0      8   8    5   1     0        1         0    0      1 16777216  1048576     128.0 POSIX      0
+Finished            : Mon Jun 23 13:10:46 2025
+[gpua051.delta.ncsa.illinois.edu:3117153] mca: base: close: component slurm closed
+[gpua051.delta.ncsa.illinois.edu:3117153] mca: base: close: unloading component slurm
