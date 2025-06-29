@@ -6,6 +6,7 @@ import argparse
 import pandas as pd
 from collections import defaultdict
 
+# List of all counters to extract
 TARGET_COUNTERS = [
     "POSIX_OPENS", "LUSTRE_STRIPE_SIZE", "LUSTRE_STRIPE_WIDTH", "POSIX_FILENOS",
     "POSIX_MEM_ALIGNMENT", "POSIX_FILE_ALIGNMENT", "POSIX_READS", "POSIX_WRITES",
@@ -19,11 +20,13 @@ TARGET_COUNTERS = [
     "POSIX_STRIDE1_COUNT", "POSIX_STRIDE2_COUNT", "POSIX_STRIDE3_COUNT", "POSIX_STRIDE4_COUNT",
     "POSIX_ACCESS1_ACCESS", "POSIX_ACCESS2_ACCESS", "POSIX_ACCESS3_ACCESS", "POSIX_ACCESS4_ACCESS",
     "POSIX_ACCESS1_COUNT", "POSIX_ACCESS2_COUNT", "POSIX_ACCESS3_COUNT", "POSIX_ACCESS4_COUNT",
+    # helper counter for time
     "POSIX_F_META_TIME"
 ]
 
+
 def parse_file(darshan_file: str, parser_cmd: str):
-    """Run darshan-parser on a file and extract the TARGET_COUNTERS per rank."""
+    """Run darshan-parser on a file and extract TARGET_COUNTERS per rank."""
     try:
         raw = subprocess.check_output([parser_cmd, darshan_file], text=True)
     except subprocess.CalledProcessError as e:
@@ -49,8 +52,9 @@ def parse_file(darshan_file: str, parser_cmd: str):
 
     records = []
     for rank, counters in rank_data.items():
-        row = {"file": os.path.basename(darshan_file), "nprocs": rank}
-        # fill in all targets (missing→0)
+        # start row with rank only
+        row = {"nprocs": rank}
+        # fill in all counters (missing→0)
         for cnt in TARGET_COUNTERS:
             row[cnt] = counters.get(cnt, 0.0)
 
@@ -60,23 +64,23 @@ def parse_file(darshan_file: str, parser_cmd: str):
         if t <= 0.0:
             t = 1e-9
         row["tag"] = total_bytes / t
-        # drop the helper
-        row.pop("POSIX_F_META_TIME", None)
+        # drop helper counter
+        del row["POSIX_F_META_TIME"]
 
         records.append(row)
     return records
 
+
 def main():
-    p = argparse.ArgumentParser(
-        description="Parse all .darshan files under a directory into one CSV"
+    parser = argparse.ArgumentParser(
+        description="Parse .darshan files under a directory into one CSV of counters + tag"
     )
-    p.add_argument("input_dir",
-                   help="root directory to search for .darshan files")
-    p.add_argument("output_csv", nargs="?", default="darshan_parsed_output.csv",
-                   help="where to write the combined CSV")
-    p.add_argument("--parser-cmd", default="darshan-parser",
-                   help="path to darshan-parser executable")
-    args = p.parse_args()
+    parser.add_argument("input_dir", help="Directory containing .darshan files")
+    parser.add_argument("output_csv", nargs="?", default="darshan_parsed_output.csv",
+                        help="Output CSV path")
+    parser.add_argument("--parser-cmd", default="darshan-parser",
+                        help="darshan-parser executable path")
+    args = parser.parse_args()
 
     all_records = []
     for root, _, files in os.walk(args.input_dir):
@@ -92,10 +96,17 @@ def main():
         print("[WARN] no records found; exiting.")
         sys.exit(1)
 
+    # build DataFrame with only nprocs, counters, and tag
     df = pd.DataFrame(all_records)
-    df.sort_values(["file", "nprocs"], inplace=True)
+    # order columns: nprocs, all TARGET_COUNTERS (minus meta-time), then tag
+    cols = ["nprocs"] + [c for c in TARGET_COUNTERS if c != "POSIX_F_META_TIME"] + ["tag"]
+    df = df[cols]
+
+    # sort by rank
+    df.sort_values("nprocs", inplace=True)
     df.to_csv(args.output_csv, index=False)
     print(f"[OK] wrote {len(df)} rows to {args.output_csv}")
+
 
 if __name__ == "__main__":
     main()
