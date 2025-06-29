@@ -1,0 +1,11 @@
+[INFO] processing logs/tests/2025/6/29/mbanisha_ior_id3247313-3247313_6-29-56599-16845770037146759593_1.darshan
+[INFO] processing logs/tests/2025/6/29/mbanisha_ior_id3247314-3247314_6-29-56599-10422012292987661668_1.darshan
+[INFO] processing logs/tests/2025/6/29/mbanisha_ior_id3247315-3247315_6-29-56599-3309309669496971184_1.darshan
+[INFO] processing logs/tests/2025/6/29/mbanisha_ior_id3247316-3247316_6-29-56599-8637133735269677909_1.darshan
+[INFO] processing logs/tests/2025/6/29/mbanisha_ior_id3247317-3247317_6-29-56599-17428871316171130607_1.darshan
+[INFO] processing logs/tests/2025/6/29/mbanisha_ior_id3247323-3247323_6-29-56599-4485618184097869438_1.darshan
+[INFO] processing logs/tests/2025/6/29/mbanisha_ior_id3247327-3247327_6-29-56599-3633381165491352789_1.darshan
+[INFO] processing logs/tests/2025/6/29/mbanisha_ior_id3247330-3247330_6-29-56599-1040721103498060377_1.darshan
+[INFO] processing logs/tests/2025/6/29/mbanisha_mpirun_id3247309-3247309_6-29-56599-16595160184241007302_1.darshan
+[OK] wrote 9 rows to data/darshan_parsed_output_6-29.csv
+✅ Darshan parsing complete, output → data/darshan_parsed_output_6-29.csv
