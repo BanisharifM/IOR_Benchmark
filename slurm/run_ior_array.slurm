@@ -22,7 +22,7 @@ export DARSHAN_ENABLE_NONMPI=1
 
 # ————————————————————————————
 # CSV configuration
-CSV_FILE="configs/ior_configurations.csv"
+CSV_FILE="configs/ior_configuration_test.csv"
 LINE_NUM=$((SLURM_ARRAY_TASK_ID + 1))  # CSV header is line 1
 
 CONFIG=$(sed -n "${LINE_NUM}p" "$CSV_FILE")
