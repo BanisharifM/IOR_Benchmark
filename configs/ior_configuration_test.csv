@@ -1,0 +1,5 @@
+config_id,testFile,api,transferSize,blockSize,segmentCount,numTasks,filePerProc,useStridedDatatype,setAlignment,useO_DIRECT,fsync,LUSTRE_STRIPE_SIZE,LUSTRE_STRIPE_WIDTH
+00001,test00001,POSIX,4K,1M,1,4,0,0,4K,0,0,1M,1
+00002,test00002,POSIX,1M,4M,1,4,1,0,1M,1,0,4M,4
+00003,test00003,POSIX,1M,1G,1,4,1,0,1M,1,0,4M,4
+00004,test00004,POSIX,1M,256M,4,4,1,0,1M,1,0,4M,4

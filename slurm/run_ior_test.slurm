@@ -23,7 +23,7 @@ export DARSHAN_ENABLE_NONMPI=1
 
 # ————————————————————————————————
 # === Read first config from CSV ===
-CSV_FILE="configs/ior_configurations.csv"
+CSV_FILE="configs/ior_configuration_test.csv"
 LINE_NUM=2  # Line 2 = first data row
 
 CONFIG=$(sed -n "${LINE_NUM}p" "$CSV_FILE")

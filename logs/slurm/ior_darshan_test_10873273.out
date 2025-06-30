@@ -1,0 +1,5 @@
+Running config:  ()
+API:  | transferSize:  | blockSize:  | segmentCount:  | numTasks: 
+Command: mpirun -n  ./ior -a  -t  -b  -s  -J  -o 
+Darshan log: darshan_.darshan
+✅ Done — check darshan_.darshan
