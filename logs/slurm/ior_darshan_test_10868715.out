@@ -1,0 +1,9 @@
+Running config: 06877 (test06877)
+API: POSIX | transferSize: 64K | blockSize: 16M | segmentCount: 256 | numTasks: 64
+Command: mpirun -n 64 ./ior -a POSIX -t 64K -b 16M -s 256 -F -J 1M --posix.odirect -O POSIX.lustre.stripesize=1M -O POSIX.lustre.stripecount=1 -e -o test06877
+Darshan log: darshan_test06877.darshan
+
+======================   ALLOCATED NODES   ======================
+	gpua001: flags=0x11 slots=4 max_slots=0 slots_inuse=0 state=UP
+=================================================================
+✅ Done — check darshan_test06877.darshan
