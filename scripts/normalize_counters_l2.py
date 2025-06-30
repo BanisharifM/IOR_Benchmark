@@ -58,3 +58,8 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
+# python scripts/normalize_counters_l2.py \
+#   --input_csv data/darshan_csv_log_scaled/darshan_parsed_output_6-29-V2_norm_log_scaled.csv \
+#   --output_csv data/darshan_csv_log_scaled_L2/darshan_parsed_output_6-29-V2_norm_log_scaled.csv
