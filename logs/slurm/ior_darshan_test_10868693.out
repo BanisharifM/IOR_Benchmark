@@ -1,0 +1,10 @@
+Running config: 00001 (test00001)
+API: POSIX | transferSize: 4K | blockSize: 1M | segmentCount: 1 | numTasks: 4
+Command: mpirun -n 4 ./ior -a POSIX -t 4K -b 1M -s 1 -J 4K -O POSIX.lustre.stripesize=1M -O POSIX.lustre.stripecount=1 -o test00001
+Darshan log: darshan_test00001.darshan
+
+======================   ALLOCATED NODES   ======================
+	gpua001: flags=0x11 slots=4 max_slots=0 slots_inuse=0 state=UP
+=================================================================
+4 total processes failed to start
+✅ Done — check darshan_test00001.darshan
