@@ -62,4 +62,4 @@ if __name__ == '__main__':
 
 # python scripts/normalize_counters_l2.py \
 #   --input_csv data/darshan_csv_log/darshan_parsed_output_6-29-V3_normalized_log.csv \
-#   --output_csv data/darshan_csv_log_L2/darshan_parsed_output_6-29-V2_norm_log_L2.csv
+#   --output_csv data/darshan_csv_log_L2/darshan_parsed_output_6-29-V3_norm_log_L2.csv
