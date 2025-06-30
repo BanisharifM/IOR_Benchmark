@@ -5,6 +5,7 @@ import subprocess
 import argparse
 import pandas as pd
 from collections import defaultdict
+import re
 
 # List of all counters to extract
 TARGET_COUNTERS = [
@@ -33,7 +34,14 @@ def parse_file(darshan_file: str, parser_cmd: str):
         print(f"[ERROR] parsing {darshan_file}: {e}", file=sys.stderr)
         return []
 
-    # accumulate per-rank sums
+    # Extract test_id from file name
+    basename = os.path.basename(darshan_file)
+    match = re.search(r'test\d+', basename)
+    if match:
+        test_id = match.group(0)  # e.g., 'test01079'
+    else:
+        test_id = "unknown"
+
     rank_data = defaultdict(lambda: defaultdict(float))
     for line in raw.splitlines():
         if not (line.startswith("POSIX") or line.startswith("LUSTRE")):
@@ -52,24 +60,24 @@ def parse_file(darshan_file: str, parser_cmd: str):
 
     records = []
     for rank, counters in rank_data.items():
-        # start row with rank only
         row = {"nprocs": rank}
-        # fill in all counters (missing→0)
         for cnt in TARGET_COUNTERS:
             row[cnt] = counters.get(cnt, 0.0)
 
-        # compute tag = total bytes / meta-time
         total_bytes = row["POSIX_BYTES_READ"] + row["POSIX_BYTES_WRITTEN"]
         t = row["POSIX_F_META_TIME"]
         if t <= 0.0:
             t = 1e-9
         row["tag"] = total_bytes / t
+
         # drop helper counter
         del row["POSIX_F_META_TIME"]
 
+        # add test_id column
+        row["test_id"] = test_id
+
         records.append(row)
     return records
-
 
 def main():
     parser = argparse.ArgumentParser(
@@ -99,7 +107,7 @@ def main():
     # build DataFrame with only nprocs, counters, and tag
     df = pd.DataFrame(all_records)
     # order columns: nprocs, all TARGET_COUNTERS (minus meta-time), then tag
-    cols = ["nprocs"] + [c for c in TARGET_COUNTERS if c != "POSIX_F_META_TIME"] + ["tag"]
+    cols = ["nprocs"] + [c for c in TARGET_COUNTERS if c != "POSIX_F_META_TIME"] + ["tag", "test_id"]
     df = df[cols]
 
     # sort by rank

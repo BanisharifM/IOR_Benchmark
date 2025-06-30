@@ -26,30 +26,32 @@ def main():
     print(f"🔹 Loading data from: {args.input_csv}")
     df = pd.read_csv(args.input_csv)
 
-    # Separate features and optional tag
+    # Separate features and exclude 'tag' and 'test_id' if present
+    exclude_cols = []
     if 'tag' in df.columns:
-        features = df.drop(columns=['tag'])
-        tag = df['tag']
-        print("🔹 Excluding 'tag' from normalization.")
-    else:
-        features = df.copy()
-        tag = None
-        print("🔹 No 'tag' column found; normalizing all columns.")
+        exclude_cols.append('tag')
+    if 'test_id' in df.columns:
+        exclude_cols.append('test_id')
+
+    features = df.drop(columns=exclude_cols)
+    extras = df[exclude_cols] if exclude_cols else None
+
+    print(f"🔹 Excluding columns from normalization: {exclude_cols}")
 
     # Compute L2 norm per row
     print("🔹 Computing L2 norms per row...")
     data = features.values.astype(float)
     norms = np.linalg.norm(data, axis=1, keepdims=True)
-    # Prevent division by zero
-    norms[norms == 0] = 1.0
+    norms[norms == 0] = 1.0  # avoid divide by zero
 
     # Apply L2 normalization
     normed_data = data / norms
 
     # Build DataFrame
     df_normed = pd.DataFrame(normed_data, columns=features.columns)
-    if tag is not None:
-        df_normed['tag'] = tag.values
+    if extras is not None:
+        for col in extras.columns:
+            df_normed[col] = extras[col].values
 
     # Ensure output directory exists
     os.makedirs(os.path.dirname(args.output_csv) or '.', exist_ok=True)
@@ -61,5 +63,5 @@ if __name__ == '__main__':
 
 
 # python scripts/normalize_counters_l2.py \
-#   --input_csv data/darshan_csv_log/darshan_parsed_output_6-29-V3_normalized_log.csv \
-#   --output_csv data/darshan_csv_log_L2/darshan_parsed_output_6-29-V3_norm_log_L2.csv
+#   --input_csv data/darshan_csv_log/darshan_parsed_output_6-29-V5_normalized_log.csv \
+#   --output_csv data/darshan_csv_log_L2/darshan_parsed_output_6-29-V5_norm_log_L2.csv
