@@ -55,6 +55,6 @@ if __name__ == "__main__":
 
 
 # python scripts/normalize_counters_log_scaled_tag.py \
-#   data/darshan_csv/darshan_parsed_output_6-29-V2.csv \
-#   data/darshan_csv_log_scaled/darshan_parsed_output_6-29-V2_norm_log_scaled.csv \
+#   data/darshan_csv/darshan_parsed_output_6-29-V3.csv \
+#   data/darshan_csv_log_scaled/darshan_parsed_output_6-29-V3_norm_log_scaled.csv \
 #   --tag_target_max 4.0

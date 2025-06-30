@@ -38,3 +38,8 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+# python scripts/normalize_counters_log.py \
+#   data/darshan_csv/darshan_parsed_output_6-29-V3.csv \
+#   data/darshan_csv_log/darshan_parsed_output_6-29-V3_normalized_log \
