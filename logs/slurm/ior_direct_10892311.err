@@ -1,0 +1,23 @@
+[gpua027.delta.ncsa.illinois.edu:2834345] mca: base: components_register: registering framework ras components
+[gpua027.delta.ncsa.illinois.edu:2834345] mca: base: components_register: found loaded component gridengine
+[gpua027.delta.ncsa.illinois.edu:2834345] mca: base: components_register: component gridengine register function successful
+[gpua027.delta.ncsa.illinois.edu:2834345] mca: base: components_register: found loaded component simulator
+[gpua027.delta.ncsa.illinois.edu:2834345] mca: base: components_register: component simulator register function successful
+[gpua027.delta.ncsa.illinois.edu:2834345] mca: base: components_register: found loaded component slurm
+[gpua027.delta.ncsa.illinois.edu:2834345] mca: base: components_register: component slurm register function successful
+[gpua027.delta.ncsa.illinois.edu:2834345] mca: base: components_open: opening ras components
+[gpua027.delta.ncsa.illinois.edu:2834345] mca: base: components_open: found loaded component gridengine
+[gpua027.delta.ncsa.illinois.edu:2834345] mca: base: components_open: component gridengine open function successful
+[gpua027.delta.ncsa.illinois.edu:2834345] mca: base: components_open: found loaded component simulator
+[gpua027.delta.ncsa.illinois.edu:2834345] mca: base: components_open: found loaded component slurm
+[gpua027.delta.ncsa.illinois.edu:2834345] mca: base: components_open: component slurm open function successful
+[gpua027.delta.ncsa.illinois.edu:2834345] mca:base:select: Auto-selecting ras components
+[gpua027.delta.ncsa.illinois.edu:2834345] mca:base:select:(  ras) Querying component [gridengine]
+[gpua027.delta.ncsa.illinois.edu:2834345] mca:base:select:(  ras) Querying component [simulator]
+[gpua027.delta.ncsa.illinois.edu:2834345] mca:base:select:(  ras) Querying component [slurm]
+[gpua027.delta.ncsa.illinois.edu:2834345] mca:base:select:(  ras) Query of component [slurm] set priority to 50
+[gpua027.delta.ncsa.illinois.edu:2834345] mca:base:select:(  ras) Selected component [slurm]
+[gpua027.delta.ncsa.illinois.edu:2834345] mca: base: close: component gridengine closed
+[gpua027.delta.ncsa.illinois.edu:2834345] mca: base: close: unloading component gridengine
+[gpua027.delta.ncsa.illinois.edu:2834345] mca: base: close: unloading component simulator
+slurmstepd: error: *** JOB 10892311 ON gpua027 CANCELLED AT 2025-06-30T19:00:50 DUE TO TIME LIMIT ***

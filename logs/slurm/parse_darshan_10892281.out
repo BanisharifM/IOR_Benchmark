@@ -1,0 +1,4 @@
+[INFO] processing logs/tests/2025/6/30/darshan_scriptfile.darshan
+[INFO] processing logs/tests/2025/6/30/darshan_scriptfile2.darshan
+[OK] wrote 2 rows to data/darshan_csv/darshan_parsed_output_6-30-V5.csv
+✅ Darshan parsing complete, output → data/darshan_csv/darshan_parsed_output_6-30-V5.csv

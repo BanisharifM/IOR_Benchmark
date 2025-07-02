@@ -1,0 +1,8 @@
+🚀 Running IOR using parameter file: ior_script.txt
+Darshan log will be: darshan_scriptfile.darshan
+IOR binary: /u/mbanisharifdehkordi/.conda/envs/ior_env/bin/ior
+
+======================   ALLOCATED NODES   ======================
+	gpua030: flags=0x11 slots=4 max_slots=0 slots_inuse=0 state=UP
+=================================================================
+✅ Done — check Darshan log: darshan_scriptfile.darshan

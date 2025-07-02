@@ -1,0 +1,43 @@
+IOR START
+api=MPIIO
+testFile=testfile
+repetitions=1
+filePerProc=0
+useStridedDatatype=1
+collective=0                  # Disable collective to spread I/O
+useFileView=1
+preallocate=1
+checkWrite=1
+checkRead=1
+fsync=1
+blockSize=256M
+transferSize=4K
+segmentCount=512
+numTasks=32
+readFile=1
+writeFile=1
+storeFileOffset=1
+useO_DIRECT=1
+setAlignment=1M
+uniqueDir=1
+verbose=2
+strideSize=1048576        # 1 MB stride (new!)
+strideCount=256           # 256 strides per segment (new!)
+RUN
+
+# Example forcing random offsets
+randomOffset=1
+blockSize=16M
+transferSize=4K
+segmentCount=512
+RUN
+
+# Example forcing very small transfer and high stride
+blockSize=4M
+transferSize=4K
+segmentCount=256
+strideSize=2097152       # 2 MB stride (new!)
+strideCount=128
+RUN
+
+IOR STOP

@@ -1,0 +1,40 @@
+IOR START
+api=MPIIO
+testFile=testfile
+repetitions=1
+filePerProc=0                 # Shared file
+useStridedDatatype=1         # Explicitly force strided access
+collective=1                 # Use collective I/O
+useFileView=1               # Use file view
+preallocate=1              # Preallocate space (may influence POSIX_SEEKS)
+checkWrite=1              # Check after write
+checkRead=1               # Check after read
+fsync=1                   # Ensure actual write to storage
+blockSize=256M
+transferSize=4K         # Small transfers to increase seeks and RW switches
+segmentCount=128        # Many segments to encourage seeks
+numTasks=32
+readFile=1
+writeFile=1
+storeFileOffset=1     # Influence signature and offset counters
+useO_DIRECT=1        # Bypass page cache (POSIX direct)
+setAlignment=1M     # Influence alignment counters
+uniqueDir=1         # Create unique directory
+verbose=2          # More output
+RUN
+
+# Second example with random offsets
+randomOffset=1
+RUN
+
+# Third example with reordered tasks to force neighbor read
+reorderTasksConstant=1
+RUN
+
+# Fourth example with different block and transfer
+blockSize=16M
+transferSize=1M
+segmentCount=64
+RUN
+
+IOR STOP

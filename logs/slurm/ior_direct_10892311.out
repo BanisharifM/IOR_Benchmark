@@ -1,0 +1,34 @@
+
+======================   ALLOCATED NODES   ======================
+	gpua027: flags=0x11 slots=4 max_slots=0 slots_inuse=0 state=UP
+=================================================================
+IOR-4.0.0: MPI Coordinated Test of Parallel I/O
+Began               : Mon Jun 30 18:00:26 2025
+Command line        : /u/mbanisharifdehkordi/.conda/envs/ior_env/bin/ior -a MPIIO -b 256M -t 4K -s 128 -z -e -o test_random_offset
+Machine             : Linux gpua027.delta.ncsa.illinois.edu
+TestID              : 0
+StartTime           : Mon Jun 30 18:00:27 2025
+Path                : test_random_offset
+FS                  : 1913.4 TiB   Used FS: 4.3%   Inodes: 7107.2 Mi   Used Inodes: 6.2%
+
+Options: 
+api                 : MPIIO
+apiVersion          : (3.1)
+test filename       : test_random_offset
+access              : single-shared-file
+type                : independent
+segments            : 128
+ordering in a file  : random
+ordering inter file : no tasks offsets
+nodes               : 1
+tasks               : 4
+clients per node    : 4
+repetitions         : 1
+xfersize            : 4096 bytes
+blocksize           : 256 MiB
+aggregate filesize  : 128 GiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
