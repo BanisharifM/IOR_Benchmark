@@ -17,7 +17,7 @@
 
 export LD_PRELOAD="$HOME/.conda/envs/ior_env/lib/libdarshan.so"
 export DARSHAN_ENABLE_NONMPI=1
-export DARSHAN_LOGFILE="darshan_test_diverse16.darshan_%h_%p"
+export DARSHAN_LOGFILE="darshan_test_diverse16_Jul_6.darshan"
 
 mpirun -n 16 ~/.conda/envs/ior_env/bin/ior \
   -a MPIIO \
