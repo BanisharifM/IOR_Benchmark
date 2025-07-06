@@ -1,0 +1,3 @@
+[INFO] processing logs/tests/2025/7/1/darshan_test_diverse16.darshan
+[WARN] no records found; exiting.
+✅ Darshan parsing complete, output → data/darshan_csv/darshan_parsed_output_7-1-V2.csv

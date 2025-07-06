@@ -1,0 +1,39 @@
+[gpua081.delta.ncsa.illinois.edu:2930203] mca: base: components_register: registering framework ras components
+[gpua081.delta.ncsa.illinois.edu:2930203] mca: base: components_register: found loaded component gridengine
+[gpua081.delta.ncsa.illinois.edu:2930203] mca: base: components_register: component gridengine register function successful
+[gpua081.delta.ncsa.illinois.edu:2930203] mca: base: components_register: found loaded component simulator
+[gpua081.delta.ncsa.illinois.edu:2930203] mca: base: components_register: component simulator register function successful
+[gpua081.delta.ncsa.illinois.edu:2930203] mca: base: components_register: found loaded component slurm
+[gpua081.delta.ncsa.illinois.edu:2930203] mca: base: components_register: component slurm register function successful
+[gpua081.delta.ncsa.illinois.edu:2930203] mca: base: components_open: opening ras components
+[gpua081.delta.ncsa.illinois.edu:2930203] mca: base: components_open: found loaded component gridengine
+[gpua081.delta.ncsa.illinois.edu:2930203] mca: base: components_open: component gridengine open function successful
+[gpua081.delta.ncsa.illinois.edu:2930203] mca: base: components_open: found loaded component simulator
+[gpua081.delta.ncsa.illinois.edu:2930203] mca: base: components_open: found loaded component slurm
+[gpua081.delta.ncsa.illinois.edu:2930203] mca: base: components_open: component slurm open function successful
+[gpua081.delta.ncsa.illinois.edu:2930203] mca:base:select: Auto-selecting ras components
+[gpua081.delta.ncsa.illinois.edu:2930203] mca:base:select:(  ras) Querying component [gridengine]
+[gpua081.delta.ncsa.illinois.edu:2930203] mca:base:select:(  ras) Querying component [simulator]
+[gpua081.delta.ncsa.illinois.edu:2930203] mca:base:select:(  ras) Querying component [slurm]
+[gpua081.delta.ncsa.illinois.edu:2930203] mca:base:select:(  ras) Query of component [slurm] set priority to 50
+[gpua081.delta.ncsa.illinois.edu:2930203] mca:base:select:(  ras) Selected component [slurm]
+[gpua081.delta.ncsa.illinois.edu:2930203] mca: base: close: component gridengine closed
+[gpua081.delta.ncsa.illinois.edu:2930203] mca: base: close: unloading component gridengine
+[gpua081.delta.ncsa.illinois.edu:2930203] mca: base: close: unloading component simulator
+darshan_library_warning: unable to create log file darshan_test_diverse.darshan.
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+darshan_library_warning: unable to create log file darshan_test_diverse.darshan.
+[gpua081.delta.ncsa.illinois.edu:2930203] mca: base: close: component slurm closed
+[gpua081.delta.ncsa.illinois.edu:2930203] mca: base: close: unloading component slurm
+darshan_library_warning: unable to create log file darshan_test_diverse.darshan.
+/var/spool/slurmd/job10899496/slurm_script: line 28: -t: command not found
+/var/spool/slurmd/job10899496/slurm_script: line 29: -s: command not found
+/var/spool/slurmd/job10899496/slurm_script: line 30: -F: command not found
+/var/spool/slurmd/job10899496/slurm_script: line 31: -z: command not found
+/var/spool/slurmd/job10899496/slurm_script: line 32: -S: command not found
+/var/spool/slurmd/job10899496/slurm_script: line 33: -e: command not found
+/var/spool/slurmd/job10899496/slurm_script: line 34: -C: command not found
+/var/spool/slurmd/job10899496/slurm_script: line 35: -o: command not found
