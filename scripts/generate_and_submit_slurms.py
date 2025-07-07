@@ -14,7 +14,7 @@ df = pd.read_csv(CSV_FILE)
 for idx, row in df.iterrows():
     config_id = row["config_id"]
     test_file = row["testFile"]
-    api = row["api"]
+    api = row["api"].strip()
     transfer_size = row["transferSize"]
     block_size = row["blockSize"]
     segment_count = int(row["segmentCount"])
@@ -25,7 +25,7 @@ for idx, row in df.iterrows():
     use_o_direct = "--posix.odirect" if int(row["useO_DIRECT"]) == 1 else ""
     fsync = "-e" if int(row["fsync"]) == 1 else ""
 
-    darshan_log = f"darshan_{test_file}.darshan"
+    darshan_log = f"$SLURM_SUBMIT_DIR/darshan_{test_file}.darshan_%h_%p"
 
     slurm_file = os.path.join(SLURM_TEMPLATE_DIR, f"ior_config_{config_id}.slurm")
 
@@ -34,8 +34,15 @@ for idx, row in df.iterrows():
         f.write(f"#SBATCH --job-name=ior_{config_id}\n")
         f.write("#SBATCH --account=bdau-delta-gpu\n")
         f.write("#SBATCH --partition=gpuA100x4-interactive\n")
-        f.write("#SBATCH --nodes=1\n")
-        f.write(f"#SBATCH --ntasks={num_tasks}\n")
+
+        if num_tasks == 64:
+            f.write("#SBATCH --nodes=4\n")
+            f.write("#SBATCH --ntasks=64\n")
+            f.write("#SBATCH --ntasks-per-node=16\n")
+        else:
+            f.write("#SBATCH --nodes=1\n")
+            f.write(f"#SBATCH --ntasks={num_tasks}\n")
+
         f.write("#SBATCH --gres=gpu:1\n")
         f.write("#SBATCH --cpus-per-task=2\n")
         f.write("#SBATCH --mem=64G\n")
@@ -45,7 +52,7 @@ for idx, row in df.iterrows():
 
         f.write(f"export LD_PRELOAD=\"{DARSHAN_LIB}\"\n")
         f.write("export DARSHAN_ENABLE_NONMPI=1\n")
-        f.write(f"export DARSHAN_LOGFILE=\"{darshan_log}\"\n\n")
+        f.write(f"export DARSHAN_LOGFILE=\"{darshan_log}\"\n")
 
         f.write(
             f"mpirun -n {num_tasks} {IOR_BIN} "

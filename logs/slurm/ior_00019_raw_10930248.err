@@ -1,0 +1,29 @@
+[gpua056.delta.ncsa.illinois.edu:1485567] mca: base: components_register: registering framework ras components
+[gpua056.delta.ncsa.illinois.edu:1485567] mca: base: components_register: found loaded component gridengine
+[gpua056.delta.ncsa.illinois.edu:1485567] mca: base: components_register: component gridengine register function successful
+[gpua056.delta.ncsa.illinois.edu:1485567] mca: base: components_register: found loaded component simulator
+[gpua056.delta.ncsa.illinois.edu:1485567] mca: base: components_register: component simulator register function successful
+[gpua056.delta.ncsa.illinois.edu:1485567] mca: base: components_register: found loaded component slurm
+[gpua056.delta.ncsa.illinois.edu:1485567] mca: base: components_register: component slurm register function successful
+[gpua056.delta.ncsa.illinois.edu:1485567] mca: base: components_open: opening ras components
+[gpua056.delta.ncsa.illinois.edu:1485567] mca: base: components_open: found loaded component gridengine
+[gpua056.delta.ncsa.illinois.edu:1485567] mca: base: components_open: component gridengine open function successful
+[gpua056.delta.ncsa.illinois.edu:1485567] mca: base: components_open: found loaded component simulator
+[gpua056.delta.ncsa.illinois.edu:1485567] mca: base: components_open: found loaded component slurm
+[gpua056.delta.ncsa.illinois.edu:1485567] mca: base: components_open: component slurm open function successful
+[gpua056.delta.ncsa.illinois.edu:1485567] mca:base:select: Auto-selecting ras components
+[gpua056.delta.ncsa.illinois.edu:1485567] mca:base:select:(  ras) Querying component [gridengine]
+[gpua056.delta.ncsa.illinois.edu:1485567] mca:base:select:(  ras) Querying component [simulator]
+[gpua056.delta.ncsa.illinois.edu:1485567] mca:base:select:(  ras) Querying component [slurm]
+[gpua056.delta.ncsa.illinois.edu:1485567] mca:base:select:(  ras) Query of component [slurm] set priority to 50
+[gpua056.delta.ncsa.illinois.edu:1485567] mca:base:select:(  ras) Selected component [slurm]
+[gpua056.delta.ncsa.illinois.edu:1485567] mca: base: close: component gridengine closed
+[gpua056.delta.ncsa.illinois.edu:1485567] mca: base: close: unloading component gridengine
+[gpua056.delta.ncsa.illinois.edu:1485567] mca: base: close: unloading component simulator
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test00019_raw.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test00019_raw.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test00019_raw.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test00019_raw.darshan.
+[gpua056.delta.ncsa.illinois.edu:1485567] mca: base: close: component slurm closed
+[gpua056.delta.ncsa.illinois.edu:1485567] mca: base: close: unloading component slurm
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test00019_raw.darshan.

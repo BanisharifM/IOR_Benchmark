@@ -1,0 +1,88 @@
+[gpua051.delta.ncsa.illinois.edu:1100991] mca: base: components_register: registering framework ras components
+[gpua051.delta.ncsa.illinois.edu:1100991] mca: base: components_register: found loaded component gridengine
+[gpua051.delta.ncsa.illinois.edu:1100991] mca: base: components_register: component gridengine register function successful
+[gpua051.delta.ncsa.illinois.edu:1100991] mca: base: components_register: found loaded component simulator
+[gpua051.delta.ncsa.illinois.edu:1100991] mca: base: components_register: component simulator register function successful
+[gpua051.delta.ncsa.illinois.edu:1100991] mca: base: components_register: found loaded component slurm
+[gpua051.delta.ncsa.illinois.edu:1100991] mca: base: components_register: component slurm register function successful
+[gpua051.delta.ncsa.illinois.edu:1100991] mca: base: components_open: opening ras components
+[gpua051.delta.ncsa.illinois.edu:1100991] mca: base: components_open: found loaded component gridengine
+[gpua051.delta.ncsa.illinois.edu:1100991] mca: base: components_open: component gridengine open function successful
+[gpua051.delta.ncsa.illinois.edu:1100991] mca: base: components_open: found loaded component simulator
+[gpua051.delta.ncsa.illinois.edu:1100991] mca: base: components_open: found loaded component slurm
+[gpua051.delta.ncsa.illinois.edu:1100991] mca: base: components_open: component slurm open function successful
+[gpua051.delta.ncsa.illinois.edu:1100991] mca:base:select: Auto-selecting ras components
+[gpua051.delta.ncsa.illinois.edu:1100991] mca:base:select:(  ras) Querying component [gridengine]
+[gpua051.delta.ncsa.illinois.edu:1100991] mca:base:select:(  ras) Querying component [simulator]
+[gpua051.delta.ncsa.illinois.edu:1100991] mca:base:select:(  ras) Querying component [slurm]
+[gpua051.delta.ncsa.illinois.edu:1100991] mca:base:select:(  ras) Query of component [slurm] set priority to 50
+[gpua051.delta.ncsa.illinois.edu:1100991] mca:base:select:(  ras) Selected component [slurm]
+[gpua051.delta.ncsa.illinois.edu:1100991] mca: base: close: component gridengine closed
+[gpua051.delta.ncsa.illinois.edu:1100991] mca: base: close: unloading component gridengine
+[gpua051.delta.ncsa.illinois.edu:1100991] mca: base: close: unloading component simulator
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
+[gpua051.delta.ncsa.illinois.edu:1100991] mca: base: close: component slurm closed
+[gpua051.delta.ncsa.illinois.edu:1100991] mca: base: close: unloading component slurm
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/Github/IOR_Benchmark/darshan_test_64.darshan.
