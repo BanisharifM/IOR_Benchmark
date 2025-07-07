@@ -28,8 +28,7 @@ for idx, row in df.iterrows():
 
     reorder_flag = "-C" if int(row["filePerProc"]) != 0 else ""
 
-    # ✅ Save Darshan logs to /work/hdd/bdau/mbanisharifdehkordi
-    darshan_log = f"/work/hdd/bdau/mbanisharifdehkordi/darshan_{test_file}.darshan_%h_%p"
+    darshan_log = f"/work/hdd/bdau/mbanisharifdehkordi/darshan_{test_file}.darshan"
     slurm_file = os.path.join(SLURM_TEMPLATE_DIR, f"ior_config_{config_id}.slurm")
 
     with open(slurm_file, "w") as f:
@@ -75,8 +74,6 @@ for idx, row in df.iterrows():
         )
 
         f.write(f"echo \"✅ Finished: {config_id}\"\n")
-
-    print(f"✅ Generated {slurm_file}")
 
     os.system(f"sbatch {slurm_file}")
     os.remove(slurm_file)
