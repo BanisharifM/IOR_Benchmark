@@ -57,10 +57,10 @@ for idx, row in df.iterrows():
         f.write("export DARSHAN_ENABLE_NONMPI=1\n")
         f.write(f"export DARSHAN_LOGFILE=\"{darshan_log}\"\n")
         f.write("export DARSHAN_DEBUG=1\n")
-        f.write("export DARSHAN_MODMEM=4194304\n")  # Optional: increase Darshan buffer if needed
 
         f.write(
-            f"mpirun -n {num_tasks} {IOR_BIN} "
+            f"mpirun -x LD_PRELOAD -x DARSHAN_LOGFILE -x DARSHAN_ENABLE_NONMPI -x DARSHAN_DEBUG "
+            f"-n {num_tasks} {IOR_BIN} "
             f"-a {api} "
             f"-b {block_size} "
             f"-t {transfer_size} "
@@ -71,7 +71,7 @@ for idx, row in df.iterrows():
             f"{reorder_flag} "
             f"{use_strided} "
             f"{use_o_direct} "
-            f"-o {test_file}\n"
+            f"-o /work/hdd/bdau/mbanisharifdehkordi/{test_file}\n"
         )
 
         f.write(f"echo \"✅ Finished: {config_id}\"\n")
