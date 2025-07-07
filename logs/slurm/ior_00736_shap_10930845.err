@@ -1,0 +1,88 @@
+[gpua011.delta.ncsa.illinois.edu:3739946] mca: base: components_register: registering framework ras components
+[gpua011.delta.ncsa.illinois.edu:3739946] mca: base: components_register: found loaded component gridengine
+[gpua011.delta.ncsa.illinois.edu:3739946] mca: base: components_register: component gridengine register function successful
+[gpua011.delta.ncsa.illinois.edu:3739946] mca: base: components_register: found loaded component simulator
+[gpua011.delta.ncsa.illinois.edu:3739946] mca: base: components_register: component simulator register function successful
+[gpua011.delta.ncsa.illinois.edu:3739946] mca: base: components_register: found loaded component slurm
+[gpua011.delta.ncsa.illinois.edu:3739946] mca: base: components_register: component slurm register function successful
+[gpua011.delta.ncsa.illinois.edu:3739946] mca: base: components_open: opening ras components
+[gpua011.delta.ncsa.illinois.edu:3739946] mca: base: components_open: found loaded component gridengine
+[gpua011.delta.ncsa.illinois.edu:3739946] mca: base: components_open: component gridengine open function successful
+[gpua011.delta.ncsa.illinois.edu:3739946] mca: base: components_open: found loaded component simulator
+[gpua011.delta.ncsa.illinois.edu:3739946] mca: base: components_open: found loaded component slurm
+[gpua011.delta.ncsa.illinois.edu:3739946] mca: base: components_open: component slurm open function successful
+[gpua011.delta.ncsa.illinois.edu:3739946] mca:base:select: Auto-selecting ras components
+[gpua011.delta.ncsa.illinois.edu:3739946] mca:base:select:(  ras) Querying component [gridengine]
+[gpua011.delta.ncsa.illinois.edu:3739946] mca:base:select:(  ras) Querying component [simulator]
+[gpua011.delta.ncsa.illinois.edu:3739946] mca:base:select:(  ras) Querying component [slurm]
+[gpua011.delta.ncsa.illinois.edu:3739946] mca:base:select:(  ras) Query of component [slurm] set priority to 50
+[gpua011.delta.ncsa.illinois.edu:3739946] mca:base:select:(  ras) Selected component [slurm]
+[gpua011.delta.ncsa.illinois.edu:3739946] mca: base: close: component gridengine closed
+[gpua011.delta.ncsa.illinois.edu:3739946] mca: base: close: unloading component gridengine
+[gpua011.delta.ncsa.illinois.edu:3739946] mca: base: close: unloading component simulator
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
+[gpua011.delta.ncsa.illinois.edu:3739946] mca: base: close: component slurm closed
+[gpua011.delta.ncsa.illinois.edu:3739946] mca: base: close: unloading component slurm
+darshan_library_warning: unable to create log file /work/hdd/bdau/mbanisharifdehkordi/darshan_test00736_shap.darshan.
