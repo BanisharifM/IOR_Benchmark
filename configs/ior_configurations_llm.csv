@@ -2,12 +2,12 @@ config_id,testFile,api,transferSize,blockSize,segmentCount,numTasks,filePerProc,
 00019_old,test00019_old,POSIX,4K,1M,1,4,0,0,1M,0,0,4M,1
 00019_raw_shap,00019_raw_shap,MPIIO,1M,4M,16,4,1,0,1M,0,0,4M,1
 00019_raw,test00019_raw,MPIIO,64K,4M,16,4,1,0,1M,0,0,4M,1
-00019_shap,test00019_shap,HDF5,1M,4M,1,4,0,0,4K,0,0,4M,4
+00019_shap,test00019_shap,POSIX,1M,4M,1,4,0,0,4K,0,0,4M,4
 00735_old,test00735_old,POSIX,4K,1M,16,64,1,0,1M,1,1,4M,1
-00735_raw_shap,test00735_raw_shap,HDF5,64K,4M,16,64,0,0,1M,1,1,4M,4
-00735_raw,test00735_raw,HDF5,1M,4M,16,64,1,0,1M,1,1,4M,4
-00735_shap,test00735_shap,HDF5,64K,4M,256,64,1,0,1M,1,1,4M,1
+00735_raw_shap,test00735_raw_shap,POSIX,64K,4M,16,64,0,0,1M,1,1,4M,4
+00735_raw,test00735_raw,POSIX,1M,4M,16,64,1,0,1M,1,1,4M,4
+00735_shap,test00735_shap,POSIX,64K,4M,256,64,1,0,1M,1,1,4M,1
 00736_old,test00736_old,POSIX,4K,1M,16,64,1,0,1M,1,1,4M,4
 00736_raw_shap,test00736_raw_shap,MPIIO,1M,4M,16,64,0,0,4K,1,1,1M,1
-00736_raw,test00736_raw,HDF5,64K,4M,16,64,1,0,4K,1,1,4M,1
+00736_raw,test00736_raw,POSIX,64K,4M,16,64,1,0,4K,1,1,4M,1
 00736_shap,test00736_shap,MPIIO,64K,4M,256,64,1,0,4K,1,1,4M,4 
