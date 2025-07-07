@@ -19,14 +19,17 @@ for idx, row in df.iterrows():
     block_size = row["blockSize"]
     segment_count = int(row["segmentCount"])
     num_tasks = int(row["numTasks"])
+    
     file_per_proc = "-F" if int(row["filePerProc"]) == 1 else ""
     use_strided = "--mpiio.useStridedDatatype" if int(row["useStridedDatatype"]) == 1 else ""
     set_alignment = row["setAlignment"]
     use_o_direct = "--posix.odirect" if int(row["useO_DIRECT"]) == 1 else ""
     fsync = "-e" if int(row["fsync"]) == 1 else ""
 
-    darshan_log = f"$SLURM_SUBMIT_DIR/darshan_{test_file}.darshan_%h_%p"
+    # Only add -C if filePerProc is not 0 (file-per-process)
+    reorder_flag = "-C" if int(row["filePerProc"]) != 0 else ""
 
+    darshan_log = f"$SLURM_SUBMIT_DIR/darshan_{test_file}.darshan_%h_%p"
     slurm_file = os.path.join(SLURM_TEMPLATE_DIR, f"ior_config_{config_id}.slurm")
 
     with open(slurm_file, "w") as f:
@@ -63,7 +66,7 @@ for idx, row in df.iterrows():
             f"{file_per_proc} "
             f"-z "
             f"{fsync} "
-            f"-C "
+            f"{reorder_flag} "
             f"{use_strided} "
             f"{use_o_direct} "
             f"-o {test_file}\n"

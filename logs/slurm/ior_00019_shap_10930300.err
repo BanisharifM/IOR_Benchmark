@@ -1,0 +1,34 @@
+[gpua056.delta.ncsa.illinois.edu:1491967] mca: base: components_register: registering framework ras components
+[gpua056.delta.ncsa.illinois.edu:1491967] mca: base: components_register: found loaded component gridengine
+[gpua056.delta.ncsa.illinois.edu:1491967] mca: base: components_register: component gridengine register function successful
+[gpua056.delta.ncsa.illinois.edu:1491967] mca: base: components_register: found loaded component simulator
+[gpua056.delta.ncsa.illinois.edu:1491967] mca: base: components_register: component simulator register function successful
+[gpua056.delta.ncsa.illinois.edu:1491967] mca: base: components_register: found loaded component slurm
+[gpua056.delta.ncsa.illinois.edu:1491967] mca: base: components_register: component slurm register function successful
+[gpua056.delta.ncsa.illinois.edu:1491967] mca: base: components_open: opening ras components
+[gpua056.delta.ncsa.illinois.edu:1491967] mca: base: components_open: found loaded component gridengine
+[gpua056.delta.ncsa.illinois.edu:1491967] mca: base: components_open: component gridengine open function successful
+[gpua056.delta.ncsa.illinois.edu:1491967] mca: base: components_open: found loaded component simulator
+[gpua056.delta.ncsa.illinois.edu:1491967] mca: base: components_open: found loaded component slurm
+[gpua056.delta.ncsa.illinois.edu:1491967] mca: base: components_open: component slurm open function successful
+[gpua056.delta.ncsa.illinois.edu:1491967] mca:base:select: Auto-selecting ras components
+[gpua056.delta.ncsa.illinois.edu:1491967] mca:base:select:(  ras) Querying component [gridengine]
+[gpua056.delta.ncsa.illinois.edu:1491967] mca:base:select:(  ras) Querying component [simulator]
+[gpua056.delta.ncsa.illinois.edu:1491967] mca:base:select:(  ras) Querying component [slurm]
+[gpua056.delta.ncsa.illinois.edu:1491967] mca:base:select:(  ras) Query of component [slurm] set priority to 50
+[gpua056.delta.ncsa.illinois.edu:1491967] mca:base:select:(  ras) Selected component [slurm]
+[gpua056.delta.ncsa.illinois.edu:1491967] mca: base: close: component gridengine closed
+[gpua056.delta.ncsa.illinois.edu:1491967] mca: base: close: unloading component gridengine
+[gpua056.delta.ncsa.illinois.edu:1491967] mca: base: close: unloading component simulator
+--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 2 in communicator MPI_COMM_WORLD
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+[gpua056.delta.ncsa.illinois.edu:1491967] 3 more processes have sent help message help-mpi-api.txt / mpi-abort
+[gpua056.delta.ncsa.illinois.edu:1491967] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[gpua056.delta.ncsa.illinois.edu:1491967] mca: base: close: component slurm closed
+[gpua056.delta.ncsa.illinois.edu:1491967] mca: base: close: unloading component slurm

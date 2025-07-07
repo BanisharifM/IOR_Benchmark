@@ -1,0 +1,9 @@
+
+======================   ALLOCATED NODES   ======================
+	gpua056: flags=0x11 slots=4 max_slots=0 slots_inuse=0 state=UP
+=================================================================
+ERROR: random offset and constant reorder tasks specified with single-shared-file. Choose one and resubmit, (ior.c:1536)
+ERROR: random offset and constant reorder tasks specified with single-shared-file. Choose one and resubmit, (ior.c:1536)
+ERROR: random offset and constant reorder tasks specified with single-shared-file. Choose one and resubmit, (ior.c:1536)
+ERROR: random offset and constant reorder tasks specified with single-shared-file. Choose one and resubmit, (ior.c:1536)
+✅ Finished: 00019_shap

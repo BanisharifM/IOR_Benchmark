@@ -1,0 +1,43 @@
+
+======================   ALLOCATED NODES   ======================
+	gpua001: flags=0x11 slots=4 max_slots=0 slots_inuse=0 state=UP
+=================================================================
+IOR-4.0.0: MPI Coordinated Test of Parallel I/O
+Began               : Sun Jul  6 20:09:15 2025
+Command line        : /u/mbanisharifdehkordi/software/src/ior-4.0.0/src/ior -a POSIX -b 1M -t 4K -s 1 -z -o test00019_old
+Machine             : Linux gpua001.delta.ncsa.illinois.edu
+TestID              : 0
+StartTime           : Sun Jul  6 20:09:16 2025
+Path                : test00019_old
+FS                  : 1923.6 TiB   Used FS: 4.3%   Inodes: 7107.2 Mi   Used Inodes: 6.3%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : test00019_old
+access              : single-shared-file
+type                : independent
+segments            : 1
+ordering in a file  : random
+ordering inter file : no tasks offsets
+nodes               : 1
+tasks               : 4
+clients per node    : 4
+repetitions         : 1
+xfersize            : 4096 bytes
+blocksize           : 1 MiB
+aggregate filesize  : 4 MiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+write     76.34      358901     0.000006    1024.00    4.00       0.001873   0.002853   0.049639   0.052395   0   
+read      67.07      17266      0.000181    1024.00    4.00       0.000366   0.059309   0.013042   0.059638   0   
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write          76.34      76.34      76.34       0.00   19543.81   19543.81   19543.81       0.00    0.05240         NA            NA     0      4   4    1   0     0        1         0    0      1  1048576     4096       4.0 POSIX      0
+read           67.07      67.07      67.07       0.00   17170.25   17170.25   17170.25       0.00    0.05964         NA            NA     0      4   4    1   0     0        1         0    0      1  1048576     4096       4.0 POSIX      0
+Finished            : Sun Jul  6 20:09:18 2025
+✅ Finished test with shared file (no -F, no -C)

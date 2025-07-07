@@ -1,0 +1,37 @@
+Submitted batch job 10930297
+Submitted batch job 10930298
+Submitted batch job 10930299
+Submitted batch job 10930300
+Submitted batch job 10930301
+Submitted batch job 10930302
+Submitted batch job 10930303
+Submitted batch job 10930304
+Submitted batch job 10930305
+Submitted batch job 10930306
+Submitted batch job 10930307
+Submitted batch job 10930308
+✅ Generated generated_slurms/ior_config_00019_old.slurm
+🗑️ Deleted generated_slurms/ior_config_00019_old.slurm after submission.
+✅ Generated generated_slurms/ior_config_00019_raw_shap.slurm
+🗑️ Deleted generated_slurms/ior_config_00019_raw_shap.slurm after submission.
+✅ Generated generated_slurms/ior_config_00019_raw.slurm
+🗑️ Deleted generated_slurms/ior_config_00019_raw.slurm after submission.
+✅ Generated generated_slurms/ior_config_00019_shap.slurm
+🗑️ Deleted generated_slurms/ior_config_00019_shap.slurm after submission.
+✅ Generated generated_slurms/ior_config_00735_old.slurm
+🗑️ Deleted generated_slurms/ior_config_00735_old.slurm after submission.
+✅ Generated generated_slurms/ior_config_00735_raw_shap.slurm
+🗑️ Deleted generated_slurms/ior_config_00735_raw_shap.slurm after submission.
+✅ Generated generated_slurms/ior_config_00735_raw.slurm
+🗑️ Deleted generated_slurms/ior_config_00735_raw.slurm after submission.
+✅ Generated generated_slurms/ior_config_00735_shap.slurm
+🗑️ Deleted generated_slurms/ior_config_00735_shap.slurm after submission.
+✅ Generated generated_slurms/ior_config_00736_old.slurm
+🗑️ Deleted generated_slurms/ior_config_00736_old.slurm after submission.
+✅ Generated generated_slurms/ior_config_00736_raw_shap.slurm
+🗑️ Deleted generated_slurms/ior_config_00736_raw_shap.slurm after submission.
+✅ Generated generated_slurms/ior_config_00736_raw.slurm
+🗑️ Deleted generated_slurms/ior_config_00736_raw.slurm after submission.
+✅ Generated generated_slurms/ior_config_00736_shap.slurm
+🗑️ Deleted generated_slurms/ior_config_00736_shap.slurm after submission.
+🎉 All jobs submitted and temporary slurm files cleaned up.

@@ -1,0 +1,44 @@
+
+======================   ALLOCATED NODES   ======================
+	gpua011: flags=0x11 slots=4 max_slots=0 slots_inuse=0 state=UP
+=================================================================
+IOR-4.0.0: MPI Coordinated Test of Parallel I/O
+Began               : Sun Jul  6 19:56:37 2025
+Command line        : /u/mbanisharifdehkordi/.conda/envs/ior_env/bin/ior -a MPIIO -b 4M -t 64K -s 16 -F -z -C -o test00019_raw
+Machine             : Linux gpua011.delta.ncsa.illinois.edu
+TestID              : 0
+StartTime           : Sun Jul  6 19:56:37 2025
+Path                : test00019_raw.00000000
+FS                  : 1923.7 TiB   Used FS: 4.3%   Inodes: 7107.2 Mi   Used Inodes: 6.3%
+
+Options: 
+api                 : MPIIO
+apiVersion          : (3.1)
+test filename       : test00019_raw
+access              : file-per-process
+type                : independent
+segments            : 16
+ordering in a file  : random
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 1
+tasks               : 4
+clients per node    : 4
+repetitions         : 1
+xfersize            : 65536 bytes
+blocksize           : 4 MiB
+aggregate filesize  : 256 MiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+write     117.56     1892.30    0.033779    4096       64.00      0.016613   2.16       0.294707   2.18       0   
+read      145.22     2333.55    0.027396    4096       64.00      0.010382   1.76       0.285514   1.76       0   
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write         117.56     117.56     117.56       0.00    1881.03    1881.03    1881.03       0.00    2.17753         NA            NA     0      4   4    1   1     1        1         0    0     16  4194304    65536     256.0 MPIIO      0
+read          145.22     145.22     145.22       0.00    2323.57    2323.57    2323.57       0.00    1.76280         NA            NA     0      4   4    1   1     1        1         0    0     16  4194304    65536     256.0 MPIIO      0
+Finished            : Sun Jul  6 19:56:41 2025
+✅ Finished: 00019_raw

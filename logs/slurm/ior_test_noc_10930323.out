@@ -1,0 +1,6 @@
+
+======================   ALLOCATED NODES   ======================
+	gpua001: flags=0x11 slots=4 max_slots=0 slots_inuse=0 state=UP
+=================================================================
+4 total processes failed to start
+✅ Finished test without -C
