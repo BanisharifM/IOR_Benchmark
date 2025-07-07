@@ -23,6 +23,6 @@ unset DARSHAN_JOBID
 unset LD_PRELOAD
 
 # === Parse existing .darshan logs into CSV ===
-$PYTHON_BIN $PARSER_SCRIPT logs/tests/2025/7/6 data/darshan_csv/darshan_parsed_output_7-6-V1.csv
+$PYTHON_BIN $PARSER_SCRIPT logs/tests/2025/7/7 data/darshan_csv/darshan_parsed_output_7-7-V1.csv
 
-echo "✅ Darshan parsing complete, output → data/darshan_csv/darshan_parsed_output_7-6-V1.csv"
+echo "✅ Darshan parsing complete, output → data/darshan_csv/darshan_parsed_output_7-7-V1.csv"

@@ -1,0 +1,14 @@
+[INFO] processing logs/tests/2025/7/7/darshan_test00019_old.darshan
+[INFO] processing logs/tests/2025/7/7/darshan_test00019_raw.darshan
+[INFO] processing logs/tests/2025/7/7/darshan_test00019_raw_shap.darshan
+[INFO] processing logs/tests/2025/7/7/darshan_test00019_shap.darshan
+[INFO] processing logs/tests/2025/7/7/darshan_test00735_old.darshan
+[INFO] processing logs/tests/2025/7/7/darshan_test00735_raw.darshan
+[INFO] processing logs/tests/2025/7/7/darshan_test00735_raw_shap.darshan
+[INFO] processing logs/tests/2025/7/7/darshan_test00735_shap.darshan
+[INFO] processing logs/tests/2025/7/7/darshan_test00736_old.darshan
+[INFO] processing logs/tests/2025/7/7/darshan_test00736_raw.darshan
+[INFO] processing logs/tests/2025/7/7/darshan_test00736_raw_shap.darshan
+[INFO] processing logs/tests/2025/7/7/darshan_test00736_shap.darshan
+[OK] wrote 12 rows to data/darshan_csv/darshan_parsed_output_7-7-V1.csv
+✅ Darshan parsing complete, output → data/darshan_csv/darshan_parsed_output_7-7-V1.csv
