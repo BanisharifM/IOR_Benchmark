@@ -1,7 +1,0 @@
-
-======================   ALLOCATED NODES   ======================
-	gpua001: flags=0x11 slots=4 max_slots=0 slots_inuse=0 state=UP
-=================================================================
-ERROR: Unrecognized I/O API, (utilities.c:321)
-ERROR: Unrecognized I/O API, (utilities.c:321)
-✅ Finished: 00019_shap

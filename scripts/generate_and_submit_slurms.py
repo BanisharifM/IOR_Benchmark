@@ -56,6 +56,7 @@ for idx, row in df.iterrows():
         f.write(f"export LD_PRELOAD=\"{DARSHAN_LIB}\"\n")
         f.write("export DARSHAN_ENABLE_NONMPI=1\n")
         f.write(f"export DARSHAN_LOGFILE=\"{darshan_log}\"\n")
+        f.write("export DARSHAN_DEBUG=1\n")
 
         f.write(
             f"mpirun -n {num_tasks} {IOR_BIN} "
