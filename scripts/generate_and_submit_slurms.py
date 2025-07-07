@@ -26,10 +26,10 @@ for idx, row in df.iterrows():
     use_o_direct = "--posix.odirect" if int(row["useO_DIRECT"]) == 1 else ""
     fsync = "-e" if int(row["fsync"]) == 1 else ""
 
-    # Only add -C if filePerProc is not 0 (file-per-process)
     reorder_flag = "-C" if int(row["filePerProc"]) != 0 else ""
 
-    darshan_log = f"$SLURM_SUBMIT_DIR/darshan_{test_file}.darshan_%h_%p"
+    # ✅ Save Darshan logs to /work/hdd/bdau/mbanisharifdehkordi
+    darshan_log = f"/work/hdd/bdau/mbanisharifdehkordi/darshan_{test_file}.darshan_%h_%p"
     slurm_file = os.path.join(SLURM_TEMPLATE_DIR, f"ior_config_{config_id}.slurm")
 
     with open(slurm_file, "w") as f:
@@ -57,6 +57,7 @@ for idx, row in df.iterrows():
         f.write("export DARSHAN_ENABLE_NONMPI=1\n")
         f.write(f"export DARSHAN_LOGFILE=\"{darshan_log}\"\n")
         f.write("export DARSHAN_DEBUG=1\n")
+        f.write("export DARSHAN_MODMEM=4194304\n")  # Optional: increase Darshan buffer if needed
 
         f.write(
             f"mpirun -n {num_tasks} {IOR_BIN} "
@@ -77,10 +78,7 @@ for idx, row in df.iterrows():
 
     print(f"✅ Generated {slurm_file}")
 
-    # Submit job
     os.system(f"sbatch {slurm_file}")
-
-    # Delete after submission
     os.remove(slurm_file)
     print(f"🗑️ Deleted {slurm_file} after submission.")
 
