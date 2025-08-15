@@ -1,0 +1,24 @@
+[gpua008.delta.ncsa.illinois.edu:3096098] mca: base: components_register: registering framework ras components
+[gpua008.delta.ncsa.illinois.edu:3096098] mca: base: components_register: found loaded component gridengine
+[gpua008.delta.ncsa.illinois.edu:3096098] mca: base: components_register: component gridengine register function successful
+[gpua008.delta.ncsa.illinois.edu:3096098] mca: base: components_register: found loaded component simulator
+[gpua008.delta.ncsa.illinois.edu:3096098] mca: base: components_register: component simulator register function successful
+[gpua008.delta.ncsa.illinois.edu:3096098] mca: base: components_register: found loaded component slurm
+[gpua008.delta.ncsa.illinois.edu:3096098] mca: base: components_register: component slurm register function successful
+[gpua008.delta.ncsa.illinois.edu:3096098] mca: base: components_open: opening ras components
+[gpua008.delta.ncsa.illinois.edu:3096098] mca: base: components_open: found loaded component gridengine
+[gpua008.delta.ncsa.illinois.edu:3096098] mca: base: components_open: component gridengine open function successful
+[gpua008.delta.ncsa.illinois.edu:3096098] mca: base: components_open: found loaded component simulator
+[gpua008.delta.ncsa.illinois.edu:3096098] mca: base: components_open: found loaded component slurm
+[gpua008.delta.ncsa.illinois.edu:3096098] mca: base: components_open: component slurm open function successful
+[gpua008.delta.ncsa.illinois.edu:3096098] mca:base:select: Auto-selecting ras components
+[gpua008.delta.ncsa.illinois.edu:3096098] mca:base:select:(  ras) Querying component [gridengine]
+[gpua008.delta.ncsa.illinois.edu:3096098] mca:base:select:(  ras) Querying component [simulator]
+[gpua008.delta.ncsa.illinois.edu:3096098] mca:base:select:(  ras) Querying component [slurm]
+[gpua008.delta.ncsa.illinois.edu:3096098] mca:base:select:(  ras) Query of component [slurm] set priority to 50
+[gpua008.delta.ncsa.illinois.edu:3096098] mca:base:select:(  ras) Selected component [slurm]
+[gpua008.delta.ncsa.illinois.edu:3096098] mca: base: close: component gridengine closed
+[gpua008.delta.ncsa.illinois.edu:3096098] mca: base: close: unloading component gridengine
+[gpua008.delta.ncsa.illinois.edu:3096098] mca: base: close: unloading component simulator
+[gpua008.delta.ncsa.illinois.edu:3096098] mca: base: close: component slurm closed
+[gpua008.delta.ncsa.illinois.edu:3096098] mca: base: close: unloading component slurm
