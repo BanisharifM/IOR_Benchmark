@@ -1,0 +1,76 @@
+Writing file first...
+IOR-4.0.0: MPI Coordinated Test of Parallel I/O
+Began               : Fri Aug 15 09:09:24 2025
+Command line        : /u/mbanisharifdehkordi/.conda/envs/ior_env/bin/ior -a POSIX -w -t 1k -b 1m -k -o /tmp/ior_read_test_11472345
+Machine             : Linux gpub018.delta.ncsa.illinois.edu
+TestID              : 0
+StartTime           : Fri Aug 15 09:09:24 2025
+Path                : /tmp/ior_read_test_11472345
+FS                  : 1.5 TiB   Used FS: 1.1%   Inodes: 149.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /tmp/ior_read_test_11472345
+access              : single-shared-file
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : no tasks offsets
+nodes               : 1
+tasks               : 1
+clients per node    : 1
+repetitions         : 1
+xfersize            : 1024 bytes
+blocksize           : 1 MiB
+aggregate filesize  : 1 MiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+write     419.47     441007     0.000002    1024.00    1.00       0.000054   0.002322   0.000008   0.002384   0   
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write         419.47     419.47     419.47       0.00  429539.68  429539.68  429539.68       0.00    0.00238         NA            NA     0      1   1    1   0     0        1         0    0      1  1048576     1024       1.0 POSIX      0
+Finished            : Fri Aug 15 09:09:26 2025
+
+Reading file with AIIO configuration...
+IOR-4.0.0: MPI Coordinated Test of Parallel I/O
+Began               : Fri Aug 15 09:09:27 2025
+Command line        : /u/mbanisharifdehkordi/.conda/envs/ior_env/bin/ior -a POSIX -r -t 1k -b 1m -o /tmp/ior_read_test_11472345
+Machine             : Linux gpub018.delta.ncsa.illinois.edu
+TestID              : 0
+StartTime           : Fri Aug 15 09:09:27 2025
+Path                : /tmp/ior_read_test_11472345
+FS                  : 1.5 TiB   Used FS: 1.1%   Inodes: 149.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /tmp/ior_read_test_11472345
+access              : single-shared-file
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : no tasks offsets
+nodes               : 1
+tasks               : 1
+clients per node    : 1
+repetitions         : 1
+xfersize            : 1024 bytes
+blocksize           : 1 MiB
+aggregate filesize  : 1 MiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+read      713.32     743074     0.000001    1024.00    1.00       0.000011   0.001378   0.000013   0.001402   0   
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read          713.32     713.32     713.32       0.00  730436.61  730436.61  730436.61       0.00    0.00140         NA            NA     0      1   1    1   0     0        1         0    0      1  1048576     1024       1.0 POSIX      0
+Finished            : Fri Aug 15 09:09:29 2025
+Darshan log saved as: /work/hdd/bdau/mbanisharifdehkordi/GNN_4_IO_5/darshan_log/11472345_read_t1k_b1m.darshan

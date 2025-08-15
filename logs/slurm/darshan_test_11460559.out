@@ -1,0 +1,73 @@
+Starting IOR benchmark with Darshan instrumentation...
+Darshan log directory: /u/mbanisharifdehkordi/Github/IOR_Benchmark/logs/darshan_gnn
+Job ID: 11460559
+
+======================   ALLOCATED NODES   ======================
+	gpua025: flags=0x11 slots=4 max_slots=0 slots_inuse=0 state=UP
+=================================================================
+IOR-4.0.0: MPI Coordinated Test of Parallel I/O
+Began               : Thu Aug 14 21:01:55 2025
+Command line        : /u/mbanisharifdehkordi/.conda/envs/ior_env/bin/ior -a POSIX -b 32m -t 256k -s 2 -i 2 -F -o /u/mbanisharifdehkordi/Github/IOR_Benchmark/logs/darshan_gnn/darshan_test_file -w -r -z -C -e -k -Y -v
+Machine             : Linux gpua025.delta.ncsa.illinois.edu
+TestID              : 0
+StartTime           : Thu Aug 14 21:01:57 2025
+Path                : /u/mbanisharifdehkordi/Github/IOR_Benchmark/logs/darshan_gnn/darshan_test_file.00000000
+FS                  : 2021.1 TiB   Used FS: 4.5%   Inodes: 7107.2 Mi   Used Inodes: 6.8%
+Participating tasks : 4
+Using reorderTasks '-C' (useful to avoid read cache in client)
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /u/mbanisharifdehkordi/Github/IOR_Benchmark/logs/darshan_gnn/darshan_test_file
+access              : file-per-process
+type                : independent
+segments            : 2
+ordering in a file  : random
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 1
+tasks               : 4
+clients per node    : 4
+repetitions         : 2
+xfersize            : 262144 bytes
+blocksize           : 32 MiB
+aggregate filesize  : 256 MiB
+verbose             : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+Commencing write performance test: Thu Aug 14 21:01:57 2025
+write     539.77     2163.90    0.003474    32768      256.00     0.005093   0.473219   0.025901   0.474277   0   
+Commencing read performance test: Thu Aug 14 21:01:57 2025
+
+read      17644      72635      0.000110    32768      256.00     0.000592   0.014098   0.000235   0.014509   0   
+Commencing write performance test: Thu Aug 14 21:01:57 2025
+write     566.79     2275.79    0.003447    32768      256.00     0.006233   0.449953   0.022951   0.451665   1   
+Commencing read performance test: Thu Aug 14 21:01:58 2025
+
+read      18052      74300      0.000106    32768      256.00     0.000412   0.013782   0.000209   0.014181   1   
+Max Write: 566.79 MiB/sec (594.32 MB/sec)
+Max Read:  18052.45 MiB/sec (18929.37 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write         566.79     539.77     553.28      13.51    2267.17    2159.08    2213.12      54.05    0.46297         NA            NA     0      4   4    2   1     1        1         0    0      2 33554432   262144     256.0 POSIX      0
+read        18052.45   17644.27   17848.36     204.09   72209.81   70577.07   71393.44     816.37    0.01434         NA            NA     0      4   4    2   1     1        1         0    0      2 33554432   262144     256.0 POSIX      0
+Finished            : Thu Aug 14 21:02:00 2025
+IOR completed.
+Looking for Darshan logs...
+Searching for any recent Darshan logs...
+No Darshan log found!
+Contents of /u/mbanisharifdehkordi/Github/IOR_Benchmark/logs/darshan_gnn:
+total 262144
+drwx------ 2 mbanisharifdehkordi grp_202     4096 Aug 14 21:01 .
+drwxr-xr-x 2 mbanisharifdehkordi grp_202     4096 Aug 14 20:58 ..
+drwxr-xr-x 2 mbanisharifdehkordi grp_202     4096 Aug 14 21:01 2025
+-rw-r--r-- 1 mbanisharifdehkordi grp_202 67108864 Aug 14 21:01 darshan_test_file.00000000
+-rw-r--r-- 1 mbanisharifdehkordi grp_202 67108864 Aug 14 21:01 darshan_test_file.00000001
+-rw-r--r-- 1 mbanisharifdehkordi grp_202 67108864 Aug 14 21:01 darshan_test_file.00000002
+-rw-r--r-- 1 mbanisharifdehkordi grp_202 67108864 Aug 14 21:01 darshan_test_file.00000003
+Job complete!

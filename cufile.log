@@ -6,3 +6,107 @@
  09-08-2025 02:30:52:201 [pid=3096103 tid=3096122] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
  09-08-2025 02:30:52:201 [pid=3096103 tid=3096120] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
  09-08-2025 02:30:52:201 [pid=3096103 tid=3096121] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 14-08-2025 21:01:57:6 [pid=308825 tid=308847] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 14-08-2025 21:01:57:6 [pid=308825 tid=308846] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 14-08-2025 21:01:57:6 [pid=308825 tid=308849] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 14-08-2025 21:01:57:6 [pid=308825 tid=308848] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 14-08-2025 21:01:57:11 [pid=308828 tid=308864] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 14-08-2025 21:01:57:11 [pid=308828 tid=308867] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 14-08-2025 21:01:57:11 [pid=308828 tid=308865] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 14-08-2025 21:01:57:11 [pid=308828 tid=308866] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 14-08-2025 21:01:57:21 [pid=308827 tid=308851] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 14-08-2025 21:01:57:21 [pid=308827 tid=308855] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 14-08-2025 21:01:57:21 [pid=308827 tid=308854] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 14-08-2025 21:01:57:21 [pid=308827 tid=308853] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 14-08-2025 21:01:57:23 [pid=308826 tid=308858] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 14-08-2025 21:01:57:23 [pid=308826 tid=308861] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 14-08-2025 21:01:57:23 [pid=308826 tid=308859] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 14-08-2025 21:01:57:23 [pid=308826 tid=308860] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 14-08-2025 21:08:42:521 [pid=311810 tid=311832] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 14-08-2025 21:08:42:521 [pid=311810 tid=311831] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 14-08-2025 21:08:42:521 [pid=311810 tid=311834] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 14-08-2025 21:08:42:521 [pid=311810 tid=311833] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 14-08-2025 21:08:42:531 [pid=311813 tid=311838] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 14-08-2025 21:08:42:531 [pid=311813 tid=311840] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 14-08-2025 21:08:42:532 [pid=311811 tid=311836] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 14-08-2025 21:08:42:532 [pid=311811 tid=311844] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 14-08-2025 21:08:42:532 [pid=311811 tid=311843] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 14-08-2025 21:08:42:532 [pid=311811 tid=311845] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 14-08-2025 21:08:42:532 [pid=311813 tid=311841] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 14-08-2025 21:08:42:532 [pid=311813 tid=311839] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 14-08-2025 21:08:42:532 [pid=311812 tid=311851] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 14-08-2025 21:08:42:532 [pid=311812 tid=311850] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 14-08-2025 21:08:42:532 [pid=311812 tid=311852] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 14-08-2025 21:08:42:532 [pid=311812 tid=311849] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 15-08-2025 00:43:22:126 [pid=544842 tid=544842] ERROR  cufio-cuda:140 unable to load,  libcuda.so.1 
+
+ 15-08-2025 00:43:22:126 [pid=544957 tid=544957] ERROR  cufio-cuda:140 unable to load,  libcuda.so.1 
+
+ 15-08-2025 00:43:22:126 [pid=544874 tid=544874] ERROR  cufio-cuda:140 unable to load,  libcuda.so.1 
+
+ 15-08-2025 00:43:22:126 [pid=544963 tid=544963] ERROR  cufio-cuda:140 unable to load,  libcuda.so.1 
+
+ 15-08-2025 00:43:22:126 [pid=544842 tid=544842] ERROR  cufio_core:898 missing cuda symbols while dynamic loading
+ 15-08-2025 00:43:22:126 [pid=544957 tid=544957] ERROR  cufio_core:898 missing cuda symbols while dynamic loading
+ 15-08-2025 00:43:22:126 [pid=544874 tid=544874] ERROR  cufio_core:898 missing cuda symbols while dynamic loading
+ 15-08-2025 00:43:22:126 [pid=544963 tid=544963] ERROR  cufio_core:898 missing cuda symbols while dynamic loading
+ 15-08-2025 00:43:22:126 [pid=544842 tid=544842] ERROR  cufio_core:1038 cuFile initialization failed
+ 15-08-2025 00:43:22:126 [pid=544957 tid=544957] ERROR  cufio_core:1038 cuFile initialization failed
+ 15-08-2025 00:43:22:126 [pid=544963 tid=544963] ERROR  cufio_core:1038 cuFile initialization failed
+ 15-08-2025 00:43:22:126 [pid=544874 tid=544874] ERROR  cufio_core:1038 cuFile initialization failed
+ 15-08-2025 03:18:03:992 [pid=1613062 tid=1613070] ERROR  0:60 numa_run_on_node encountered error for node 1 errno 22 hence not affinitizing
+ 15-08-2025 03:18:03:993 [pid=1613062 tid=1613071] ERROR  0:60 numa_run_on_node encountered error for node 1 errno 22 hence not affinitizing
+ 15-08-2025 03:18:03:993 [pid=1613062 tid=1613072] ERROR  0:60 numa_run_on_node encountered error for node 1 errno 22 hence not affinitizing
+ 15-08-2025 03:18:03:993 [pid=1613062 tid=1613073] ERROR  0:60 numa_run_on_node encountered error for node 1 errno 22 hence not affinitizing
+ 15-08-2025 03:20:56:612 [pid=1613877 tid=1613885] ERROR  0:60 numa_run_on_node encountered error for node 1 errno 22 hence not affinitizing
+ 15-08-2025 03:20:56:612 [pid=1613877 tid=1613886] ERROR  0:60 numa_run_on_node encountered error for node 1 errno 22 hence not affinitizing
+ 15-08-2025 03:20:56:612 [pid=1613877 tid=1613887] ERROR  0:60 numa_run_on_node encountered error for node 1 errno 22 hence not affinitizing
+ 15-08-2025 03:20:56:612 [pid=1613877 tid=1613888] ERROR  0:60 numa_run_on_node encountered error for node 1 errno 22 hence not affinitizing
+ 15-08-2025 03:23:12:540 [pid=1615024 tid=1615032] ERROR  0:60 numa_run_on_node encountered error for node 1 errno 22 hence not affinitizing
+ 15-08-2025 03:23:12:540 [pid=1615024 tid=1615033] ERROR  0:60 numa_run_on_node encountered error for node 1 errno 22 hence not affinitizing
+ 15-08-2025 03:23:12:540 [pid=1615024 tid=1615034] ERROR  0:60 numa_run_on_node encountered error for node 1 errno 22 hence not affinitizing
+ 15-08-2025 03:23:12:540 [pid=1615024 tid=1615035] ERROR  0:60 numa_run_on_node encountered error for node 1 errno 22 hence not affinitizing
+ 15-08-2025 03:34:54:208 [pid=1618887 tid=1618895] ERROR  0:60 numa_run_on_node encountered error for node 1 errno 22 hence not affinitizing
+ 15-08-2025 03:34:54:208 [pid=1618887 tid=1618896] ERROR  0:60 numa_run_on_node encountered error for node 1 errno 22 hence not affinitizing
+ 15-08-2025 03:34:54:208 [pid=1618887 tid=1618897] ERROR  0:60 numa_run_on_node encountered error for node 1 errno 22 hence not affinitizing
+ 15-08-2025 03:34:54:208 [pid=1618887 tid=1618898] ERROR  0:60 numa_run_on_node encountered error for node 1 errno 22 hence not affinitizing
+ 15-08-2025 03:53:49:153 [pid=1625688 tid=1625700] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 15-08-2025 03:53:49:153 [pid=1625688 tid=1625701] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 15-08-2025 03:53:49:153 [pid=1625688 tid=1625702] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 15-08-2025 03:53:49:153 [pid=1625688 tid=1625703] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 15-08-2025 07:21:09:635 [pid=1697969 tid=1697981] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 15-08-2025 07:21:09:635 [pid=1697969 tid=1697982] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 15-08-2025 07:21:09:635 [pid=1697969 tid=1697983] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 15-08-2025 07:21:09:635 [pid=1697969 tid=1697984] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 15-08-2025 07:21:15:292 [pid=1697998 tid=1698010] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 15-08-2025 07:21:15:292 [pid=1697998 tid=1698011] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 15-08-2025 07:21:15:292 [pid=1697998 tid=1698012] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 15-08-2025 07:21:15:292 [pid=1697998 tid=1698013] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 15-08-2025 07:21:21:72 [pid=1698023 tid=1698035] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 15-08-2025 07:21:21:72 [pid=1698023 tid=1698036] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 15-08-2025 07:21:21:72 [pid=1698023 tid=1698037] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 15-08-2025 07:21:21:72 [pid=1698023 tid=1698038] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 15-08-2025 07:21:26:678 [pid=1698048 tid=1698060] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 15-08-2025 07:21:26:678 [pid=1698048 tid=1698061] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 15-08-2025 07:21:26:678 [pid=1698048 tid=1698062] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 15-08-2025 07:21:26:678 [pid=1698048 tid=1698063] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 15-08-2025 08:37:48:141 [pid=2259410 tid=2259423] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 15-08-2025 08:37:48:141 [pid=2259410 tid=2259424] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 15-08-2025 08:37:48:141 [pid=2259410 tid=2259425] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 15-08-2025 08:37:48:141 [pid=2259410 tid=2259426] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 15-08-2025 08:55:31:535 [pid=2279148 tid=2279160] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 15-08-2025 08:55:31:535 [pid=2279148 tid=2279161] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 15-08-2025 08:55:31:535 [pid=2279148 tid=2279162] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 15-08-2025 08:55:31:535 [pid=2279148 tid=2279163] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 15-08-2025 09:06:07:140 [pid=2284990 tid=2285002] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 15-08-2025 09:06:07:141 [pid=2284990 tid=2285003] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 15-08-2025 09:06:07:141 [pid=2284990 tid=2285004] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 15-08-2025 09:06:07:141 [pid=2284990 tid=2285005] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 15-08-2025 09:09:24:446 [pid=2287127 tid=2287139] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 15-08-2025 09:09:24:447 [pid=2287127 tid=2287140] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 15-08-2025 09:09:24:447 [pid=2287127 tid=2287141] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 15-08-2025 09:09:24:447 [pid=2287127 tid=2287142] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 15-08-2025 09:09:27:462 [pid=2287144 tid=2287156] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 15-08-2025 09:09:27:462 [pid=2287144 tid=2287157] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 15-08-2025 09:09:27:462 [pid=2287144 tid=2287158] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing
+ 15-08-2025 09:09:27:462 [pid=2287144 tid=2287159] ERROR  0:60 numa_run_on_node encountered error for node 3 errno 22 hence not affinitizing

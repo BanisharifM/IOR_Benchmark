@@ -1,0 +1,48 @@
+[gpub018.delta.ncsa.illinois.edu:2287128] mca: base: components_register: registering framework ras components
+[gpub018.delta.ncsa.illinois.edu:2287128] mca: base: components_register: found loaded component gridengine
+[gpub018.delta.ncsa.illinois.edu:2287128] mca: base: components_register: component gridengine register function successful
+[gpub018.delta.ncsa.illinois.edu:2287128] mca: base: components_register: found loaded component simulator
+[gpub018.delta.ncsa.illinois.edu:2287128] mca: base: components_register: component simulator register function successful
+[gpub018.delta.ncsa.illinois.edu:2287128] mca: base: components_register: found loaded component slurm
+[gpub018.delta.ncsa.illinois.edu:2287128] mca: base: components_register: component slurm register function successful
+[gpub018.delta.ncsa.illinois.edu:2287128] mca: base: components_open: opening ras components
+[gpub018.delta.ncsa.illinois.edu:2287128] mca: base: components_open: found loaded component gridengine
+[gpub018.delta.ncsa.illinois.edu:2287128] mca: base: components_open: component gridengine open function successful
+[gpub018.delta.ncsa.illinois.edu:2287128] mca: base: components_open: found loaded component simulator
+[gpub018.delta.ncsa.illinois.edu:2287128] mca: base: components_open: found loaded component slurm
+[gpub018.delta.ncsa.illinois.edu:2287128] mca: base: components_open: component slurm open function successful
+[gpub018.delta.ncsa.illinois.edu:2287128] mca:base:select: Auto-selecting ras components
+[gpub018.delta.ncsa.illinois.edu:2287128] mca:base:select:(  ras) Querying component [gridengine]
+[gpub018.delta.ncsa.illinois.edu:2287128] mca:base:select:(  ras) Querying component [simulator]
+[gpub018.delta.ncsa.illinois.edu:2287128] mca:base:select:(  ras) Querying component [slurm]
+[gpub018.delta.ncsa.illinois.edu:2287128] mca:base:select:(  ras) Query of component [slurm] set priority to 50
+[gpub018.delta.ncsa.illinois.edu:2287128] mca:base:select:(  ras) Selected component [slurm]
+[gpub018.delta.ncsa.illinois.edu:2287128] mca: base: close: component gridengine closed
+[gpub018.delta.ncsa.illinois.edu:2287128] mca: base: close: unloading component gridengine
+[gpub018.delta.ncsa.illinois.edu:2287128] mca: base: close: unloading component simulator
+[gpub018.delta.ncsa.illinois.edu:2287128] mca: base: close: component slurm closed
+[gpub018.delta.ncsa.illinois.edu:2287128] mca: base: close: unloading component slurm
+[gpub018.delta.ncsa.illinois.edu:2287145] mca: base: components_register: registering framework ras components
+[gpub018.delta.ncsa.illinois.edu:2287145] mca: base: components_register: found loaded component gridengine
+[gpub018.delta.ncsa.illinois.edu:2287145] mca: base: components_register: component gridengine register function successful
+[gpub018.delta.ncsa.illinois.edu:2287145] mca: base: components_register: found loaded component simulator
+[gpub018.delta.ncsa.illinois.edu:2287145] mca: base: components_register: component simulator register function successful
+[gpub018.delta.ncsa.illinois.edu:2287145] mca: base: components_register: found loaded component slurm
+[gpub018.delta.ncsa.illinois.edu:2287145] mca: base: components_register: component slurm register function successful
+[gpub018.delta.ncsa.illinois.edu:2287145] mca: base: components_open: opening ras components
+[gpub018.delta.ncsa.illinois.edu:2287145] mca: base: components_open: found loaded component gridengine
+[gpub018.delta.ncsa.illinois.edu:2287145] mca: base: components_open: component gridengine open function successful
+[gpub018.delta.ncsa.illinois.edu:2287145] mca: base: components_open: found loaded component simulator
+[gpub018.delta.ncsa.illinois.edu:2287145] mca: base: components_open: found loaded component slurm
+[gpub018.delta.ncsa.illinois.edu:2287145] mca: base: components_open: component slurm open function successful
+[gpub018.delta.ncsa.illinois.edu:2287145] mca:base:select: Auto-selecting ras components
+[gpub018.delta.ncsa.illinois.edu:2287145] mca:base:select:(  ras) Querying component [gridengine]
+[gpub018.delta.ncsa.illinois.edu:2287145] mca:base:select:(  ras) Querying component [simulator]
+[gpub018.delta.ncsa.illinois.edu:2287145] mca:base:select:(  ras) Querying component [slurm]
+[gpub018.delta.ncsa.illinois.edu:2287145] mca:base:select:(  ras) Query of component [slurm] set priority to 50
+[gpub018.delta.ncsa.illinois.edu:2287145] mca:base:select:(  ras) Selected component [slurm]
+[gpub018.delta.ncsa.illinois.edu:2287145] mca: base: close: component gridengine closed
+[gpub018.delta.ncsa.illinois.edu:2287145] mca: base: close: unloading component gridengine
+[gpub018.delta.ncsa.illinois.edu:2287145] mca: base: close: unloading component simulator
+[gpub018.delta.ncsa.illinois.edu:2287145] mca: base: close: component slurm closed
+[gpub018.delta.ncsa.illinois.edu:2287145] mca: base: close: unloading component slurm

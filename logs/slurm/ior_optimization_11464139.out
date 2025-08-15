@@ -1,0 +1,238 @@
+=======================================================================
+IOR PERFORMANCE OPTIMIZATION COMPARISON
+Based on GNN Interpretability Analysis
+=======================================================================
+
+TEST 1: BASELINE (Original Configuration)
+-----------------------------------------------------------------------
+Config: -t 1k -b 1m (1KB transfers, 1MB block)
+IOR-4.0.0: MPI Coordinated Test of Parallel I/O
+Began               : Fri Aug 15 07:21:09 2025
+Command line        : /u/mbanisharifdehkordi/.conda/envs/ior_env/bin/ior -a POSIX -w -t 1k -b 1m -Y -o /tmp/ior_baseline_11464139
+Machine             : Linux gpub017.delta.ncsa.illinois.edu
+TestID              : 0
+StartTime           : Fri Aug 15 07:21:09 2025
+Path                : /tmp/ior_baseline_11464139
+FS                  : 1.5 TiB   Used FS: 0.7%   Inodes: 149.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /tmp/ior_baseline_11464139
+access              : single-shared-file
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : no tasks offsets
+nodes               : 1
+tasks               : 1
+clients per node    : 1
+repetitions         : 1
+xfersize            : 1024 bytes
+blocksize           : 1 MiB
+aggregate filesize  : 1 MiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+write     5.10       5226       0.000191    1024.00    1.00       0.000046   0.195939   0.000022   0.196007   0   
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write           5.10       5.10       5.10       0.00    5224.30    5224.30    5224.30       0.00    0.19601         NA            NA     0      1   1    1   0     0        1         0    0      1  1048576     1024       1.0 POSIX      0
+Finished            : Fri Aug 15 07:21:11 2025
+
+TEST 2: AIIO SUGGESTION
+-----------------------------------------------------------------------
+Config: -t 1m -b 1m (1MB transfers, 1MB block)
+IOR-4.0.0: MPI Coordinated Test of Parallel I/O
+Began               : Fri Aug 15 07:21:14 2025
+Command line        : /u/mbanisharifdehkordi/.conda/envs/ior_env/bin/ior -a POSIX -w -t 1m -b 1m -Y -o /tmp/ior_aiio_11464139
+Machine             : Linux gpub017.delta.ncsa.illinois.edu
+TestID              : 0
+StartTime           : Fri Aug 15 07:21:15 2025
+Path                : /tmp/ior_aiio_11464139
+FS                  : 1.5 TiB   Used FS: 0.7%   Inodes: 149.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /tmp/ior_aiio_11464139
+access              : single-shared-file
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : no tasks offsets
+nodes               : 1
+tasks               : 1
+clients per node    : 1
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 1 MiB
+aggregate filesize  : 1 MiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+write     912.40     943.39     0.001060    1024.00    1024.00    0.000032   0.001060   0.000004   0.001096   0   
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write         912.40     912.40     912.40       0.00     912.40     912.40     912.40       0.00    0.00110         NA            NA     0      1   1    1   0     0        1         0    0      1  1048576  1048576       1.0 POSIX      0
+Finished            : Fri Aug 15 07:21:17 2025
+
+TEST 3: GNN-OPTIMIZED (Multi-Bottleneck Solution)
+-----------------------------------------------------------------------
+Config: -t 1M -b 64M -s 1 -C -Q 1 (1MB transfers, 64MB block, aligned)
+Addresses: POSIX_SIZE_WRITE_100_1K, POSIX_BYTES_WRITTEN, POSIX_WRITES,
+          POSIX_FILE_ALIGNMENT, POSIX_CONSEC_WRITES
+IOR-4.0.0: MPI Coordinated Test of Parallel I/O
+Began               : Fri Aug 15 07:21:20 2025
+Command line        : /u/mbanisharifdehkordi/.conda/envs/ior_env/bin/ior -a POSIX -w -t 1M -b 64M -s 1 -C -Q 1 -Y -o /tmp/ior_gnn_optimized_11464139
+Machine             : Linux gpub017.delta.ncsa.illinois.edu
+TestID              : 0
+StartTime           : Fri Aug 15 07:21:21 2025
+Path                : /tmp/ior_gnn_optimized_11464139
+FS                  : 1.5 TiB   Used FS: 0.7%   Inodes: 149.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /tmp/ior_gnn_optimized_11464139
+access              : single-shared-file
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 1
+tasks               : 1
+clients per node    : 1
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 64 MiB
+aggregate filesize  : 64 MiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+write     864.13     864.79     0.001156    65536      1024.00    0.000036   0.074006   0.000021   0.074063   0   
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write         864.13     864.13     864.13       0.00     864.13     864.13     864.13       0.00    0.07406         NA            NA     0      1   1    1   0     1        1         0    0      1 67108864  1048576      64.0 POSIX      0
+Finished            : Fri Aug 15 07:21:23 2025
+
+TEST 4: ULTRA-OPTIMIZED (GNN + Additional Optimizations)
+-----------------------------------------------------------------------
+Config: -t 4M -b 256M -s 1 -F -C (4MB transfers, 256MB block, file-per-process)
+IOR-4.0.0: MPI Coordinated Test of Parallel I/O
+Began               : Fri Aug 15 07:21:26 2025
+Command line        : /u/mbanisharifdehkordi/.conda/envs/ior_env/bin/ior -a POSIX -w -t 4M -b 256M -s 1 -F -C -Y -o /tmp/ior_ultra_11464139
+Machine             : Linux gpub017.delta.ncsa.illinois.edu
+TestID              : 0
+StartTime           : Fri Aug 15 07:21:26 2025
+Path                : /tmp/ior_ultra_11464139.00000000
+FS                  : 1.5 TiB   Used FS: 0.7%   Inodes: 149.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /tmp/ior_ultra_11464139
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 1
+tasks               : 1
+clients per node    : 1
+repetitions         : 1
+xfersize            : 4 MiB
+blocksize           : 256 MiB
+aggregate filesize  : 256 MiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+write     1228.36    307.18     0.003255    262144     4096       0.000034   0.208350   0.000024   0.208408   0   
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write        1228.36    1228.36    1228.36       0.00     307.09     307.09     307.09       0.00    0.20841         NA            NA     0      1   1    1   1     1        1         0    0      1 268435456  4194304     256.0 POSIX      0
+Finished            : Fri Aug 15 07:21:29 2025
+
+=======================================================================
+PERFORMANCE COMPARISON SUMMARY
+=======================================================================
+
+All tests completed. Darshan logs saved in: /work/hdd/bdau/mbanisharifdehkordi/GNN_4_IO_5/darshan_log
+
+To analyze the results, run:
+  darshan-parser /work/hdd/bdau/mbanisharifdehkordi/GNN_4_IO_5/darshan_log/11464139_baseline.darshan | grep "agg_perf_by_slowest"
+  darshan-parser /work/hdd/bdau/mbanisharifdehkordi/GNN_4_IO_5/darshan_log/11464139_aiio.darshan | grep "agg_perf_by_slowest"
+  darshan-parser /work/hdd/bdau/mbanisharifdehkordi/GNN_4_IO_5/darshan_log/11464139_gnn_optimized.darshan | grep "agg_perf_by_slowest"
+  darshan-parser /work/hdd/bdau/mbanisharifdehkordi/GNN_4_IO_5/darshan_log/11464139_ultra.darshan | grep "agg_perf_by_slowest"
+
+Expected Performance Improvements:
+  Baseline:       ~5 MB/s     (1x)
+  AIIO:           ~160 MB/s   (32x)
+  GNN-Optimized:  ~800 MB/s   (160x)
+  Ultra:          ~1000+ MB/s (200x+)
+=======================================================================
+
+Extracting key bottleneck metrics from each test:
+
+=== baseline ===
+POSIX	0	17797936084940206881	POSIX_SIZE_WRITE_0_100	0	/	UNKNOWN	UNKNOWN
+POSIX	0	17797936084940206881	POSIX_SIZE_WRITE_100_1K	0	/	UNKNOWN	UNKNOWN
+POSIX	0	8780505339297317124	POSIX_SIZE_WRITE_0_100	0	/sys	UNKNOWN	UNKNOWN
+POSIX	0	8780505339297317124	POSIX_SIZE_WRITE_100_1K	0	/sys	UNKNOWN	UNKNOWN
+POSIX	0	10441124524225347337	POSIX_SIZE_WRITE_0_100	0	/u/mbanisharifdehkordi/Github/IOR_Benchmark/pci	/u	nfs
+POSIX	0	10441124524225347337	POSIX_SIZE_WRITE_100_1K	0	/u/mbanisharifdehkordi/Github/IOR_Benchmark/pci	/u	nfs
+POSIX	0	14493397781087100756	POSIX_SIZE_WRITE_0_100	0	/u/mbanisharifdehkordi/Github/IOR_Benchmark/pci/devices	/u	nfs
+POSIX	0	14493397781087100756	POSIX_SIZE_WRITE_100_1K	0	/u/mbanisharifdehkordi/Github/IOR_Benchmark/pci/devices	/u	nfs
+POSIX	0	8227631753902332350	POSIX_SIZE_WRITE_0_100	0	/u/mbanisharifdehkordi/Github/IOR_Benchmark/pci/devices/0000:07:00.0	/u	nfs
+POSIX	0	8227631753902332350	POSIX_SIZE_WRITE_100_1K	0	/u/mbanisharifdehkordi/Github/IOR_Benchmark/pci/devices/0000:07:00.0	/u	nfs
+
+=== aiio ===
+POSIX	0	17797936084940206881	POSIX_SIZE_WRITE_0_100	0	/	UNKNOWN	UNKNOWN
+POSIX	0	17797936084940206881	POSIX_SIZE_WRITE_100_1K	0	/	UNKNOWN	UNKNOWN
+POSIX	0	8780505339297317124	POSIX_SIZE_WRITE_0_100	0	/sys	UNKNOWN	UNKNOWN
+POSIX	0	8780505339297317124	POSIX_SIZE_WRITE_100_1K	0	/sys	UNKNOWN	UNKNOWN
+POSIX	0	10441124524225347337	POSIX_SIZE_WRITE_0_100	0	/u/mbanisharifdehkordi/Github/IOR_Benchmark/pci	/u	nfs
+POSIX	0	10441124524225347337	POSIX_SIZE_WRITE_100_1K	0	/u/mbanisharifdehkordi/Github/IOR_Benchmark/pci	/u	nfs
+POSIX	0	14493397781087100756	POSIX_SIZE_WRITE_0_100	0	/u/mbanisharifdehkordi/Github/IOR_Benchmark/pci/devices	/u	nfs
+POSIX	0	14493397781087100756	POSIX_SIZE_WRITE_100_1K	0	/u/mbanisharifdehkordi/Github/IOR_Benchmark/pci/devices	/u	nfs
+POSIX	0	8227631753902332350	POSIX_SIZE_WRITE_0_100	0	/u/mbanisharifdehkordi/Github/IOR_Benchmark/pci/devices/0000:07:00.0	/u	nfs
+POSIX	0	8227631753902332350	POSIX_SIZE_WRITE_100_1K	0	/u/mbanisharifdehkordi/Github/IOR_Benchmark/pci/devices/0000:07:00.0	/u	nfs
+
+=== gnn_optimized ===
+POSIX	0	17797936084940206881	POSIX_SIZE_WRITE_0_100	0	/	UNKNOWN	UNKNOWN
+POSIX	0	17797936084940206881	POSIX_SIZE_WRITE_100_1K	0	/	UNKNOWN	UNKNOWN
+POSIX	0	8780505339297317124	POSIX_SIZE_WRITE_0_100	0	/sys	UNKNOWN	UNKNOWN
+POSIX	0	8780505339297317124	POSIX_SIZE_WRITE_100_1K	0	/sys	UNKNOWN	UNKNOWN
+POSIX	0	10441124524225347337	POSIX_SIZE_WRITE_0_100	0	/u/mbanisharifdehkordi/Github/IOR_Benchmark/pci	/u	nfs
+POSIX	0	10441124524225347337	POSIX_SIZE_WRITE_100_1K	0	/u/mbanisharifdehkordi/Github/IOR_Benchmark/pci	/u	nfs
+POSIX	0	14493397781087100756	POSIX_SIZE_WRITE_0_100	0	/u/mbanisharifdehkordi/Github/IOR_Benchmark/pci/devices	/u	nfs
+POSIX	0	14493397781087100756	POSIX_SIZE_WRITE_100_1K	0	/u/mbanisharifdehkordi/Github/IOR_Benchmark/pci/devices	/u	nfs
+POSIX	0	8227631753902332350	POSIX_SIZE_WRITE_0_100	0	/u/mbanisharifdehkordi/Github/IOR_Benchmark/pci/devices/0000:07:00.0	/u	nfs
+POSIX	0	8227631753902332350	POSIX_SIZE_WRITE_100_1K	0	/u/mbanisharifdehkordi/Github/IOR_Benchmark/pci/devices/0000:07:00.0	/u	nfs
+
+=== ultra ===
+POSIX	0	17797936084940206881	POSIX_SIZE_WRITE_0_100	0	/	UNKNOWN	UNKNOWN
+POSIX	0	17797936084940206881	POSIX_SIZE_WRITE_100_1K	0	/	UNKNOWN	UNKNOWN
+POSIX	0	8780505339297317124	POSIX_SIZE_WRITE_0_100	0	/sys	UNKNOWN	UNKNOWN
+POSIX	0	8780505339297317124	POSIX_SIZE_WRITE_100_1K	0	/sys	UNKNOWN	UNKNOWN
+POSIX	0	10441124524225347337	POSIX_SIZE_WRITE_0_100	0	/u/mbanisharifdehkordi/Github/IOR_Benchmark/pci	/u	nfs
+POSIX	0	10441124524225347337	POSIX_SIZE_WRITE_100_1K	0	/u/mbanisharifdehkordi/Github/IOR_Benchmark/pci	/u	nfs
+POSIX	0	14493397781087100756	POSIX_SIZE_WRITE_0_100	0	/u/mbanisharifdehkordi/Github/IOR_Benchmark/pci/devices	/u	nfs
+POSIX	0	14493397781087100756	POSIX_SIZE_WRITE_100_1K	0	/u/mbanisharifdehkordi/Github/IOR_Benchmark/pci/devices	/u	nfs
+POSIX	0	8227631753902332350	POSIX_SIZE_WRITE_0_100	0	/u/mbanisharifdehkordi/Github/IOR_Benchmark/pci/devices/0000:07:00.0	/u	nfs
+POSIX	0	8227631753902332350	POSIX_SIZE_WRITE_100_1K	0	/u/mbanisharifdehkordi/Github/IOR_Benchmark/pci/devices/0000:07:00.0	/u	nfs
+

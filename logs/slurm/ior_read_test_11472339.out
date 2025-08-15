@@ -1,0 +1,31 @@
+IOR-4.0.0: MPI Coordinated Test of Parallel I/O
+Began               : Fri Aug 15 09:06:06 2025
+Command line        : /u/mbanisharifdehkordi/.conda/envs/ior_env/bin/ior -a POSIX -r -t 1k -b 1m -o /tmp/ior_read_test_11472339
+Machine             : Linux gpub018.delta.ncsa.illinois.edu
+TestID              : 0
+StartTime           : Fri Aug 15 09:06:07 2025
+Path                : /tmp/ior_read_test_11472339
+FS                  : 1.5 TiB   Used FS: 1.1%   Inodes: 149.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /tmp/ior_read_test_11472339
+access              : single-shared-file
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : no tasks offsets
+nodes               : 1
+tasks               : 1
+clients per node    : 1
+repetitions         : 1
+xfersize            : 1024 bytes
+blocksize           : 1 MiB
+aggregate filesize  : 1 MiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+ERROR: open64("/tmp/ior_read_test_11472339", 0) failed: No such file or directory, (aiori-POSIX.c:641)

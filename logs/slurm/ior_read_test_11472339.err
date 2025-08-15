@@ -1,0 +1,34 @@
+[gpub018.delta.ncsa.illinois.edu:2284991] mca: base: components_register: registering framework ras components
+[gpub018.delta.ncsa.illinois.edu:2284991] mca: base: components_register: found loaded component gridengine
+[gpub018.delta.ncsa.illinois.edu:2284991] mca: base: components_register: component gridengine register function successful
+[gpub018.delta.ncsa.illinois.edu:2284991] mca: base: components_register: found loaded component simulator
+[gpub018.delta.ncsa.illinois.edu:2284991] mca: base: components_register: component simulator register function successful
+[gpub018.delta.ncsa.illinois.edu:2284991] mca: base: components_register: found loaded component slurm
+[gpub018.delta.ncsa.illinois.edu:2284991] mca: base: components_register: component slurm register function successful
+[gpub018.delta.ncsa.illinois.edu:2284991] mca: base: components_open: opening ras components
+[gpub018.delta.ncsa.illinois.edu:2284991] mca: base: components_open: found loaded component gridengine
+[gpub018.delta.ncsa.illinois.edu:2284991] mca: base: components_open: component gridengine open function successful
+[gpub018.delta.ncsa.illinois.edu:2284991] mca: base: components_open: found loaded component simulator
+[gpub018.delta.ncsa.illinois.edu:2284991] mca: base: components_open: found loaded component slurm
+[gpub018.delta.ncsa.illinois.edu:2284991] mca: base: components_open: component slurm open function successful
+[gpub018.delta.ncsa.illinois.edu:2284991] mca:base:select: Auto-selecting ras components
+[gpub018.delta.ncsa.illinois.edu:2284991] mca:base:select:(  ras) Querying component [gridengine]
+[gpub018.delta.ncsa.illinois.edu:2284991] mca:base:select:(  ras) Querying component [simulator]
+[gpub018.delta.ncsa.illinois.edu:2284991] mca:base:select:(  ras) Querying component [slurm]
+[gpub018.delta.ncsa.illinois.edu:2284991] mca:base:select:(  ras) Query of component [slurm] set priority to 50
+[gpub018.delta.ncsa.illinois.edu:2284991] mca:base:select:(  ras) Selected component [slurm]
+[gpub018.delta.ncsa.illinois.edu:2284991] mca: base: close: component gridengine closed
+[gpub018.delta.ncsa.illinois.edu:2284991] mca: base: close: unloading component gridengine
+[gpub018.delta.ncsa.illinois.edu:2284991] mca: base: close: unloading component simulator
+--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 0 in communicator MPI_COMM_WORLD
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+[warn] Epoll MOD(1) on fd 8 failed.  Old events were 6; read change was 0 (none); write change was 2 (del): Bad file descriptor
+[warn] Epoll MOD(4) on fd 8 failed.  Old events were 6; read change was 2 (del); write change was 0 (none): Bad file descriptor
+[gpub018.delta.ncsa.illinois.edu:2284991] mca: base: close: component slurm closed
+[gpub018.delta.ncsa.illinois.edu:2284991] mca: base: close: unloading component slurm

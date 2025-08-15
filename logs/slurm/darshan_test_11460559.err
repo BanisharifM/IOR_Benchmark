@@ -1,0 +1,29 @@
+[gpua025.delta.ncsa.illinois.edu:308821] mca: base: components_register: registering framework ras components
+[gpua025.delta.ncsa.illinois.edu:308821] mca: base: components_register: found loaded component gridengine
+[gpua025.delta.ncsa.illinois.edu:308821] mca: base: components_register: component gridengine register function successful
+[gpua025.delta.ncsa.illinois.edu:308821] mca: base: components_register: found loaded component simulator
+[gpua025.delta.ncsa.illinois.edu:308821] mca: base: components_register: component simulator register function successful
+[gpua025.delta.ncsa.illinois.edu:308821] mca: base: components_register: found loaded component slurm
+[gpua025.delta.ncsa.illinois.edu:308821] mca: base: components_register: component slurm register function successful
+[gpua025.delta.ncsa.illinois.edu:308821] mca: base: components_open: opening ras components
+[gpua025.delta.ncsa.illinois.edu:308821] mca: base: components_open: found loaded component gridengine
+[gpua025.delta.ncsa.illinois.edu:308821] mca: base: components_open: component gridengine open function successful
+[gpua025.delta.ncsa.illinois.edu:308821] mca: base: components_open: found loaded component simulator
+[gpua025.delta.ncsa.illinois.edu:308821] mca: base: components_open: found loaded component slurm
+[gpua025.delta.ncsa.illinois.edu:308821] mca: base: components_open: component slurm open function successful
+[gpua025.delta.ncsa.illinois.edu:308821] mca:base:select: Auto-selecting ras components
+[gpua025.delta.ncsa.illinois.edu:308821] mca:base:select:(  ras) Querying component [gridengine]
+[gpua025.delta.ncsa.illinois.edu:308821] mca:base:select:(  ras) Querying component [simulator]
+[gpua025.delta.ncsa.illinois.edu:308821] mca:base:select:(  ras) Querying component [slurm]
+[gpua025.delta.ncsa.illinois.edu:308821] mca:base:select:(  ras) Query of component [slurm] set priority to 50
+[gpua025.delta.ncsa.illinois.edu:308821] mca:base:select:(  ras) Selected component [slurm]
+[gpua025.delta.ncsa.illinois.edu:308821] mca: base: close: component gridengine closed
+[gpua025.delta.ncsa.illinois.edu:308821] mca: base: close: unloading component gridengine
+[gpua025.delta.ncsa.illinois.edu:308821] mca: base: close: unloading component simulator
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/ior-darshan-repo/logs/2025/8/14/mbanisha_ior_id308828-308828_8-14-75715-5954685958322542546.darshan_partial.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/ior-darshan-repo/logs/2025/8/14/mbanisha_ior_id308825-308825_8-14-75715-3344391286656667380.darshan_partial.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/ior-darshan-repo/logs/2025/8/14/mbanisha_ior_id308826-308826_8-14-75715-8579392582111456752.darshan_partial.
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/ior-darshan-repo/logs/2025/8/14/mbanisha_ior_id308827-308827_8-14-75715-11002376596540571307.darshan_partial.
+[gpua025.delta.ncsa.illinois.edu:308821] mca: base: close: component slurm closed
+[gpua025.delta.ncsa.illinois.edu:308821] mca: base: close: unloading component slurm
+darshan_library_warning: unable to create log file /u/mbanisharifdehkordi/ior-darshan-repo/logs/2025/8/14/mbanisha_mpirun_id308821-308821_8-14-75715-13392344598228846839.darshan_partial.
